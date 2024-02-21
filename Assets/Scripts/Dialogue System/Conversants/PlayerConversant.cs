@@ -9,7 +9,6 @@ namespace Game.Dialogue
     public class PlayerConversant : MonoBehaviour
     {
         [SerializeField] string playerName;
-        [SerializeField] Sprite playerSprite;
 
         [SerializeField] GameObject DialogueUI;
         Dialogue currentDialogue;
@@ -146,19 +145,6 @@ namespace Game.Dialogue
             else
             {
                 return currentConversant.GetName();
-            }
-        }
-
-        // Returns sprite of conversant for current node
-        public Sprite GetConversantSprite()
-        {
-            if (isChoosing || hasSingleChoice)
-            {
-                return playerSprite;
-            }
-            else
-            {
-                return currentConversant.GetConversantSprite();
             }
         }
 

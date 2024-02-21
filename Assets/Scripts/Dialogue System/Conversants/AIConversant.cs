@@ -9,7 +9,6 @@ namespace Game.Dialogue
         PlayerConversant playerConversant;
         [SerializeField] Dialogue dialogue = null;
         [SerializeField] string conversantName = "";
-        [SerializeField] Sprite conversantSprite;
 
         void Start()
         {
@@ -24,11 +23,6 @@ namespace Game.Dialogue
         public void SetName(string newName)
         {
             conversantName = newName;
-        }
-
-        public Sprite GetConversantSprite()
-        {
-            return conversantSprite;
         }
 
         public void StartDialogue()

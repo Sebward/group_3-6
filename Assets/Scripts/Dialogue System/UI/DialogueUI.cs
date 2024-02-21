@@ -70,14 +70,15 @@ namespace Game.UI
 
             // Activate text UI or choice UI
             textResponse.SetActive(!playerConversant.IsChoosing());
+            button.gameObject.SetActive(!playerConversant.IsChoosing());
             choiceRoot.gameObject.SetActive(playerConversant.IsChoosing());
 
+            // Set name
+            speakerName.text = playerConversant.GetConversantName();
+            
             // Choice UI is displayed
             if (playerConversant.IsChoosing())
             {
-                // Set player name
-                speakerName.text = "Player";
-
                 BuildChoiceList();
             }
             // Text UI is displayed for player
@@ -91,8 +92,7 @@ namespace Game.UI
                 BuildTextResponse();
             }
 
-            // Set name
-            speakerName.text = playerConversant.GetConversantName();
+            
         }
 
         private void BuildTextResponse()
@@ -111,15 +111,15 @@ namespace Game.UI
             // Change look of button when at end of dialogue
             if (!textFullyDisplayed)
             {
-                button.transform.GetChild(0).GetComponent<Image>().sprite = skipSprite;
+                button.gameObject.GetComponent<Image>().sprite = skipSprite;
             }
             else if (!playerConversant.HasNext())
             {
-                button.transform.GetChild(0).GetComponent<Image>().sprite = quitSprite;
+                button.gameObject.GetComponent<Image>().sprite = quitSprite;
             }
             else
             {
-                button.transform.GetChild(0).GetComponent<Image>().sprite = continueSprite;
+                button.gameObject.GetComponent<Image>().sprite = continueSprite;
             }
         }
 
