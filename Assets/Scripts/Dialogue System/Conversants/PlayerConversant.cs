@@ -192,11 +192,17 @@ namespace Game.Dialogue
         {
             // Gets list of actions for dialogue triggers from current AI Conversant
             // Could add a general list of dialogue triggers
-            DialogueTrigger dialogueTrigger = currentConversant.GetComponent<DialogueTrigger>();
+            DialogueTrigger dialogueTrigger = currentConversant.gameObject.GetComponent<DialogueTrigger>();
 
             foreach (DialogueAction action in actions)
             {
                 if (action == DialogueAction.None) continue;
+
+                if (dialogueTrigger == null)
+                {
+                    Debug.Log("Trigger not set! Is it on the same component as the AI Conversant?");
+                    return;
+                }
 
                 foreach (var trigger in dialogueTrigger.Triggers)
                 {

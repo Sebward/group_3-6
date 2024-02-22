@@ -15,12 +15,9 @@ namespace Game.Dialogue
 
         private void OnMouseOver()
         {
-            Debug.Log("Mouse over person");
-
             //Input
             if (Input.GetKeyDown(KeyCode.E))
             {
-                Debug.Log("Interacted with character");
                 aIConversant.StartDialogue();
             }
         }
