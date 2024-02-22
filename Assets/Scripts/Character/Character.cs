@@ -2,16 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Character : MonoBehaviour
+namespace Game.Dialogue
 {
-    private void OnMouseOver()
+    public class Character : MonoBehaviour
     {
-        Debug.Log("Mouse over person");
+        AIConversant aIConversant;
 
-        //Input
-        if (Input.GetKeyDown(KeyCode.E))
+        void Start()
         {
-            Debug.Log("Interacted with character");
+            aIConversant = gameObject.GetComponent<AIConversant>();
+        }
+
+        private void OnMouseOver()
+        {
+            Debug.Log("Mouse over person");
+
+            //Input
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                Debug.Log("Interacted with character");
+                aIConversant.StartDialogue();
+            }
         }
     }
 }
