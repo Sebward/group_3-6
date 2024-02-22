@@ -36,16 +36,20 @@ public class Player : MonoBehaviour
     //Player movement
     void UpdateMovement()
     {
-        if(Input.GetKey(KeyCode.W))
+        if (playerConversant.GetCurrentDialogue() == null)
         {
-            transform.position += Vector3.right * movementSpeed * Time.deltaTime;
-        }   
+            if (Input.GetKey(KeyCode.W))
+            {
+                transform.position += Vector3.right * movementSpeed * Time.deltaTime;
+            }
+        }
     }
+
 
     //Mouse Look at x and y directions
     void UpdateLook()
     {
-        if (playerConversant.GetCurrentDialogue() == null) 
+        if (playerConversant.GetCurrentDialogue() == null)
         {
             look.x += Input.GetAxis("Mouse X") * mouseSensitivity;
             look.y += Input.GetAxis("Mouse Y") * mouseSensitivity;
@@ -56,5 +60,5 @@ public class Player : MonoBehaviour
             cameraTransform.localRotation = Quaternion.Euler(-look.y, 0, 0);
             transform.localRotation = Quaternion.Euler(0, look.x, 0);
         }
-    }    
+    }
 }
