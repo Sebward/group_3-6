@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -30,6 +31,12 @@ public class GameManager : MonoBehaviour
         }
     }
 
+    public void Restart()
+    {
+        // Assumes only one scene -- update here otherwise!
+        SceneManager.LoadScene("TogetherScene");
+    }
+
     public void Quit()
     {
         #if UNITY_EDITOR
@@ -38,6 +45,4 @@ public class GameManager : MonoBehaviour
             Application.Quit();
         #endif
     }
-
-
 }
