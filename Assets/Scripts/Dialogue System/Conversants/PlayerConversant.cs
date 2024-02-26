@@ -14,8 +14,10 @@ namespace Game.Dialogue
         Dialogue currentDialogue;
         DialogueNode currentNode = null;
         AIConversant currentConversant = null;
+        Player player;
         bool isChoosing = false;
         bool hasSingleChoice = false;
+
 
         public event Action onConversationUpdated;
 
@@ -23,6 +25,7 @@ namespace Game.Dialogue
         {
             // Activate the UI for setup
             DialogueUI.SetActive(true);
+            player = gameObject.GetComponent<Player>();
         }
 
         // Starts the given dialogue through the AIConversant
@@ -46,6 +49,7 @@ namespace Game.Dialogue
             hasSingleChoice = false;
             currentConversant = null;
             onConversationUpdated();
+            player.SanityCheck();
         }
 
         public bool IsChoosing()

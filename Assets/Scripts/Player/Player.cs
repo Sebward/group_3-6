@@ -12,7 +12,7 @@ public class Player : MonoBehaviour
     PlayerConversant playerConversant;
     SanitySystem playerSanitySystem;
     public float xOffset;
-    public float yOffset = 0;
+    public float zOffset = 0;
     public int HallwayNumber = 0;
 
     private float rotationX = 0;
@@ -29,7 +29,7 @@ public class Player : MonoBehaviour
     {
         UpdateMovement();
         UpdateLook();
-        SanityCheck();
+        //SanityCheck();
     }
 
     //Player movement
@@ -62,11 +62,11 @@ public class Player : MonoBehaviour
     {
         if(collision.gameObject.tag == "Door")
         {
-            gameObject.transform.position = new Vector3(xOffset * HallwayNumber, yOffset, 0);
+            gameObject.transform.position = new Vector3(0, 0, zOffset * HallwayNumber);
         }
     }
 
-    void SanityCheck()
+    public void SanityCheck()
     {
         if (playerSanitySystem.currentSanity <= 0)
         {
@@ -103,6 +103,6 @@ public class Player : MonoBehaviour
 
     void ChangeHallway()
     {
-        gameObject.transform.position += new Vector3(xOffset, yOffset, 0);
+        gameObject.transform.position += new Vector3(xOffset, 0, zOffset);
     }
 }
