@@ -10,14 +10,10 @@ public class Player : MonoBehaviour
     [SerializeField] float movementSpeed = 20f;
     [SerializeField] Transform cameraTransform;
     PlayerConversant playerConversant;
+    public float xOffset;
+    public float yOffset = 0;
 
     private float rotationX = 0;
-    CharacterController controller;
-
-    void Awake()
-    {
-        controller = GetComponent<CharacterController>();
-    }
     // Start is called before the first frame update
     void Start()
     {
@@ -55,12 +51,14 @@ public class Player : MonoBehaviour
             rotationX = Mathf.Clamp(rotationX, -90.0f, 90f);
             cameraTransform.transform.localRotation = Quaternion.Euler(rotationX, 0, 0);
             transform.rotation *= Quaternion.Euler(0, Input.GetAxis("Mouse X") * mouseSensitivity, 0);
-            
-            /*look.y += Input.GetAxis("Mouse Y") * mouseSensitivity;
-            look.y = Mathf.Clamp(look.y, -89f, 89f);
+        }
+    }
 
-            cameraTransform.localRotation = Quaternion.Euler(-look.y, 0, 0);
-            transform.localRotation = Quaternion.Euler(0, look.x, 0);*/
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.tag == "Door")
+        {
+            gameObject.transform.position = new Vector3(xOffset, yOffset, 0);
         }
     }
 }
