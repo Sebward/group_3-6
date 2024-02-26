@@ -269,6 +269,8 @@ MonoBehaviour:
   mouseSensitivity: 3
   movementSpeed: 5
   cameraTransform: {fileID: 720803273}
+  xOffset: 0
+  yOffset: 0
 --- !u!4 &393901160
 Transform:
   m_ObjectHideFlags: 0
@@ -298,6 +300,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxSanity: 100
+  currentSanity: 0
 --- !u!136 &393901162
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -708,8 +711,8 @@ GameObject:
   - component: {fileID: 998728022}
   - component: {fileID: 998728021}
   m_Layer: 0
-  m_Name: Cube
-  m_TagString: Untagged
+  m_Name: Door
+  m_TagString: Door
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

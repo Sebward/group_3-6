@@ -10,8 +10,10 @@ public class Player : MonoBehaviour
     [SerializeField] float movementSpeed = 20f;
     [SerializeField] Transform cameraTransform;
     PlayerConversant playerConversant;
+    SanitySystem playerSanitySystem;
     public float xOffset;
     public float yOffset = 0;
+    public int HallwayNumber = 0;
 
     private float rotationX = 0;
     // Start is called before the first frame update
@@ -19,6 +21,7 @@ public class Player : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.Confined;
         playerConversant = gameObject.GetComponent<PlayerConversant>();
+        playerSanitySystem = gameObject.GetComponent<SanitySystem>();
     }
 
     // Update is called once per frame
@@ -26,6 +29,7 @@ public class Player : MonoBehaviour
     {
         UpdateMovement();
         UpdateLook();
+        SanityCheck();
     }
 
     //Player movement
@@ -58,7 +62,47 @@ public class Player : MonoBehaviour
     {
         if(collision.gameObject.tag == "Door")
         {
-            gameObject.transform.position = new Vector3(xOffset, yOffset, 0);
+            gameObject.transform.position = new Vector3(xOffset * HallwayNumber, yOffset, 0);
         }
+    }
+
+    void SanityCheck()
+    {
+        if (playerSanitySystem.currentSanity <= 0)
+        {
+            //Game over Pop up
+        }
+        else if(playerSanitySystem.currentSanity <= 25)
+        {
+            //Fade in triggers and call the function to change the hallway
+            if (HallwayNumber == 1)
+            {
+                HallwayNumber = 2;
+                ChangeHallway();
+            }
+        }
+        else if(playerSanitySystem.currentSanity <= 50)
+        {
+            //Fade out triggers and call the function to change the hallway
+            if (HallwayNumber == 1)
+            {
+                HallwayNumber = 2;
+                ChangeHallway();
+            }
+        }
+        else if(playerSanitySystem.currentSanity <= 75)
+        {
+            //Fade out triggers and call the function to change the hallway
+            if (HallwayNumber == 0)
+            {
+                HallwayNumber = 1;
+                ChangeHallway();
+            }
+        }
+    }
+
+    void ChangeHallway()
+    {
+        gameObject.transform.position += new Vector3(xOffset, yOffset, 0);
     }
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 public class SanitySystem : MonoBehaviour
 {
     public float maxSanity = 100.0f;
-    private float currentSanity;
+    public float currentSanity;
 
     // Event triggered when sanity changes.
     public event Action<float> OnSanityChanged;
