@@ -1130,7 +1130,7 @@ MonoBehaviour:
   movementSpeed: 5
   cameraTransform: {fileID: 720803273}
   xOffset: 0
-  zOffset: 0
+  zOffset: 10
   HallwayNumber: 0
 --- !u!4 &393901160
 Transform:
