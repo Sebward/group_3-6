@@ -19,7 +19,7 @@ public class FadeInOut : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(fadeIn)
+        if (fadeIn == true) 
         {
             if(canvasGroup.alpha < 1)
             {
@@ -30,7 +30,7 @@ public class FadeInOut : MonoBehaviour
                 }
             }
         }
-        if (fadeOut)
+        if (fadeOut == true) 
         {
             if (canvasGroup.alpha >= 0)
             {

@@ -17,12 +17,14 @@ public class Player : MonoBehaviour
 
     private float rotationX = 0;
     private float rotationY = 0;
+    private FadeInOut fadeInOut;
     // Start is called before the first frame update
     void Start()
     {
         Cursor.lockState = CursorLockMode.Confined;
         playerConversant = gameObject.GetComponent<PlayerConversant>();
         playerSanitySystem = gameObject.GetComponent<SanitySystem>();
+        fadeInOut = FindObjectOfType<FadeInOut>();
     }
 
     // Update is called once per frame
@@ -91,10 +93,10 @@ public class Player : MonoBehaviour
         else if(playerSanitySystem.currentSanity <= 25)
         {
             //Fade in triggers and call the function to change the hallway
-            if (HallwayNumber == 1)
+            if (HallwayNumber == 2)
             {
-                HallwayNumber = 2;
-                ChangeHallway();
+                HallwayNumber = 3;
+                StartCoroutine(Fade());
             }
         }
         else if(playerSanitySystem.currentSanity <= 50)
@@ -103,7 +105,7 @@ public class Player : MonoBehaviour
             if (HallwayNumber == 1)
             {
                 HallwayNumber = 2;
-                ChangeHallway();
+                StartCoroutine(Fade());
             }
         }
         else if(playerSanitySystem.currentSanity <= 75)
@@ -111,8 +113,9 @@ public class Player : MonoBehaviour
             //Fade out triggers and call the function to change the hallway
             if (HallwayNumber == 0)
             {
+                Debug.Log("Sanity is 75");
                 HallwayNumber = 1;
-                ChangeHallway();
+                StartCoroutine(Fade());
             }
         }
     }
@@ -120,5 +123,14 @@ public class Player : MonoBehaviour
     void ChangeHallway()
     {
         gameObject.transform.position += new Vector3(xOffset, 0, zOffset);
+    }
+
+    public IEnumerator Fade()
+    {
+        fadeInOut.FadeIn();
+        //yield return new WaitForSeconds(3);
+        ChangeHallway();
+        yield return new WaitForSeconds(3);
+        fadeInOut.FadeOut();
     }
 }
