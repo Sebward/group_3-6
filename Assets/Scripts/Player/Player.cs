@@ -16,6 +16,7 @@ public class Player : MonoBehaviour
     public int HallwayNumber = 0;
 
     private float rotationX = 0;
+    private float rotationY = 0;
     // Start is called before the first frame update
     void Start()
     {
@@ -48,14 +49,27 @@ public class Player : MonoBehaviour
     //Mouse Look at x and y directions
     void UpdateLook()
     {
-        if (playerConversant.GetCurrentDialogue() == null)
+        /*if (playerConversant.GetCurrentDialogue() == null)
         {
             //Input.mousePosition.Set(0, 0, 0);
             rotationX -= Input.GetAxis("Mouse Y") * mouseSensitivity;
             rotationX = Mathf.Clamp(rotationX, -90.0f, 90f);
             cameraTransform.transform.localRotation = Quaternion.Euler(rotationX, 0, 0);
             transform.rotation *= Quaternion.Euler(0, Input.GetAxis("Mouse X") * mouseSensitivity, 0);
+        }*/
+        if (playerConversant.GetCurrentDialogue() == null)
+        {
+            rotationX -= Input.GetAxis("Mouse Y") * mouseSensitivity;
+            rotationX = Mathf.Clamp(rotationX, -90.0f, 90.0f);
+
+            rotationY += Input.GetAxis("Mouse X") * mouseSensitivity;
+            rotationY = Mathf.Clamp(rotationY, -20.0f, 180.0f);
+
+            cameraTransform.transform.localRotation = Quaternion.Euler(rotationX, 0, 0);
+            transform.rotation = Quaternion.Euler(0, rotationY, 0);
         }
+
+
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -71,6 +85,7 @@ public class Player : MonoBehaviour
         if (playerSanitySystem.currentSanity <= 0)
         {
             //Game over Pop up
+            GameObject.Find("Game UI").transform.Find("End Screen").gameObject.SetActive(true);
         }
         else if(playerSanitySystem.currentSanity <= 25)
         {
