@@ -136,7 +136,6 @@ GameObject:
   - component: {fileID: 59769717}
   - component: {fileID: 59769716}
   - component: {fileID: 59769715}
-  - component: {fileID: 59769719}
   m_Layer: 0
   m_Name: Door
   m_TagString: Door
@@ -235,22 +234,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 59769713}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!54 &59769719
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 59769713}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &135178917
 GameObject:
   m_ObjectHideFlags: 0
@@ -1110,7 +1093,6 @@ GameObject:
   - component: {fileID: 393901157}
   - component: {fileID: 393901161}
   - component: {fileID: 393901162}
-  - component: {fileID: 393901163}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -1194,22 +1176,6 @@ CapsuleCollider:
   m_Height: 1
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &393901163
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 393901156}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &396457488
 GameObject:
   m_ObjectHideFlags: 0
@@ -2477,7 +2443,6 @@ GameObject:
   - component: {fileID: 665079582}
   - component: {fileID: 665079581}
   - component: {fileID: 665079580}
-  - component: {fileID: 665079584}
   m_Layer: 0
   m_Name: Door
   m_TagString: Door
@@ -2576,22 +2541,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 665079578}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!54 &665079584
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 665079578}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &670305809
 GameObject:
   m_ObjectHideFlags: 0
@@ -3291,7 +3240,6 @@ GameObject:
   - component: {fileID: 998728023}
   - component: {fileID: 998728022}
   - component: {fileID: 998728021}
-  - component: {fileID: 998728025}
   m_Layer: 0
   m_Name: Door
   m_TagString: Door
@@ -3390,22 +3338,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 998728019}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!54 &998728025
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 998728019}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &1003603862
 GameObject:
   m_ObjectHideFlags: 0
@@ -4341,7 +4273,6 @@ GameObject:
   - component: {fileID: 1183590327}
   - component: {fileID: 1183590326}
   - component: {fileID: 1183590325}
-  - component: {fileID: 1183590329}
   m_Layer: 0
   m_Name: Door
   m_TagString: Door
@@ -4440,22 +4371,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1183590323}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!54 &1183590329
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1183590323}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!1 &1267180423
 GameObject:
   m_ObjectHideFlags: 0
