@@ -1,0 +1,206 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8740707518396085949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe3a9293e80eddc41a48c80d620d2557, type: 3}
+  m_Name: 1af5e8f8-6195-47ec-b8b3-e8a739afea0b
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: "Um, I don\u2019t think I should be talking to you. You\u2019re stunting
+    my progress."
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 456
+    y: 215
+    width: 200
+    height: 100
+  onEnterActions: 
+  onExitActions: 
+  condition:
+    and: []
+--- !u!114 &-8495010046473545104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe3a9293e80eddc41a48c80d620d2557, type: 3}
+  m_Name: c75e2ef3-34ee-46e3-bd68-1e9d71596ffa
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: "I keep thinking that I\u2019m seeing something in the shadows, but the doctors
+    say that I\u2019m just not ready to get better yet."
+  children:
+  - 6edc03a6-3fba-4f71-aa35-680faccd9d9a
+  - f0e6e3cf-9c8d-4ca9-b7df-2d69e34c341b
+  - 38276705-6c04-4d01-b8a2-57c47e3b7e34
+  rect:
+    serializedVersion: 2
+    x: -1.0000076
+    y: 70.00001
+    width: 200
+    height: 100
+  onEnterActions: 
+  onExitActions: 
+  condition:
+    and: []
+--- !u!114 &-8301450160239825346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe3a9293e80eddc41a48c80d620d2557, type: 3}
+  m_Name: ea5364f0-bf81-4122-8d17-426dc6a2d585
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: "Rude. You\u2019re here too."
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 459
+    y: 18
+    width: 200
+    height: 100
+  onEnterActions: 
+  onExitActions: 
+  condition:
+    and: []
+--- !u!114 &-5812214535628586546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe3a9293e80eddc41a48c80d620d2557, type: 3}
+  m_Name: f0e6e3cf-9c8d-4ca9-b7df-2d69e34c341b
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: I see them too. In the wallpaper right?
+  children:
+  - 16816347-f5ce-4127-82c0-200f7ed6f747
+  rect:
+    serializedVersion: 2
+    x: 220
+    y: 119.00001
+    width: 200
+    height: 100
+  onEnterActions: 
+  onExitActions: 
+  condition:
+    and: []
+--- !u!114 &-4353921876261724719
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe3a9293e80eddc41a48c80d620d2557, type: 3}
+  m_Name: 38276705-6c04-4d01-b8a2-57c47e3b7e34
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: Of course! Do you hear the whispers too?
+  children:
+  - 1af5e8f8-6195-47ec-b8b3-e8a739afea0b
+  rect:
+    serializedVersion: 2
+    x: 221
+    y: 214
+    width: 200
+    height: 100
+  onEnterActions: 
+  onExitActions: 02000000
+  condition:
+    and: []
+--- !u!114 &-3410989681403754766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe3a9293e80eddc41a48c80d620d2557, type: 3}
+  m_Name: 16816347-f5ce-4127-82c0-200f7ed6f747
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: "I guess you\u2019re not ready either. The doctors say that we won\u2019t
+    feel better until we decide to."
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 456
+    y: 119.00001
+    width: 200
+    height: 100
+  onEnterActions: 
+  onExitActions: 
+  condition:
+    and: []
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a835619fdf382d64ab80de894b7885ea, type: 3}
+  m_Name: Lucy
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: -8495010046473545104}
+  - {fileID: 4092545355264075669}
+  - {fileID: -8301450160239825346}
+  - {fileID: -5812214535628586546}
+  - {fileID: -3410989681403754766}
+  - {fileID: -4353921876261724719}
+  - {fileID: -8740707518396085949}
+--- !u!114 &4092545355264075669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe3a9293e80eddc41a48c80d620d2557, type: 3}
+  m_Name: 6edc03a6-3fba-4f71-aa35-680faccd9d9a
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: Weird, you definitely belong here then.
+  children:
+  - ea5364f0-bf81-4122-8d17-426dc6a2d585
+  rect:
+    serializedVersion: 2
+    x: 220
+    y: 20
+    width: 200
+    height: 100
+  onEnterActions: 
+  onExitActions: 
+  condition:
+    and: []

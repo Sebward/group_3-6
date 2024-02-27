@@ -1,0 +1,203 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8495010046473545104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe3a9293e80eddc41a48c80d620d2557, type: 3}
+  m_Name: c75e2ef3-34ee-46e3-bd68-1e9d71596ffa
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: The woman in the paper, I think she wants out.
+  children:
+  - 6edc03a6-3fba-4f71-aa35-680faccd9d9a
+  - 9076053d-a4f0-4e6b-96cf-f5f1557b103c
+  - f8230ec3-f09c-464c-9b06-8dadd167674b
+  rect:
+    serializedVersion: 2
+    x: -2.0000076
+    y: 70.00001
+    width: 200
+    height: 100
+  onEnterActions: 
+  onExitActions: 
+  condition:
+    and: []
+--- !u!114 &-8301450160239825346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe3a9293e80eddc41a48c80d620d2557, type: 3}
+  m_Name: ea5364f0-bf81-4122-8d17-426dc6a2d585
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Yes, perhaps we must let her out, tear down the paper so she can creep out.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 459
+    y: 18
+    width: 200
+    height: 100
+  onEnterActions: 
+  onExitActions: 
+  condition:
+    and: []
+--- !u!114 &-4734551238612647020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe3a9293e80eddc41a48c80d620d2557, type: 3}
+  m_Name: 7f682947-e235-4535-8d24-e9dd097a9ba1
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: 'You sound like the doctors. '
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 420
+    y: 227
+    width: 200
+    height: 100
+  onEnterActions: 
+  onExitActions: 
+  condition:
+    and: []
+--- !u!114 &-2725491946936478492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe3a9293e80eddc41a48c80d620d2557, type: 3}
+  m_Name: d198e2d5-ac37-4877-b6f6-4ab3f416fba8
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: "She\u2019s right there! How can you not see her?"
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 458
+    y: 128
+    width: 200
+    height: 100
+  onEnterActions: 
+  onExitActions: 
+  condition:
+    and: []
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a835619fdf382d64ab80de894b7885ea, type: 3}
+  m_Name: Beth
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: -8495010046473545104}
+  - {fileID: 4092545355264075669}
+  - {fileID: 5420945262881527025}
+  - {fileID: -2725491946936478492}
+  - {fileID: -8301450160239825346}
+  - {fileID: 8067439663179234552}
+  - {fileID: -4734551238612647020}
+--- !u!114 &4092545355264075669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe3a9293e80eddc41a48c80d620d2557, type: 3}
+  m_Name: 6edc03a6-3fba-4f71-aa35-680faccd9d9a
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: "I think you\u2019re right."
+  children:
+  - ea5364f0-bf81-4122-8d17-426dc6a2d585
+  rect:
+    serializedVersion: 2
+    x: 220
+    y: 20
+    width: 200
+    height: 100
+  onEnterActions: 
+  onExitActions: 02000000
+  condition:
+    and: []
+--- !u!114 &5420945262881527025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe3a9293e80eddc41a48c80d620d2557, type: 3}
+  m_Name: 9076053d-a4f0-4e6b-96cf-f5f1557b103c
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: "I don\u2019t see anyone."
+  children:
+  - d198e2d5-ac37-4877-b6f6-4ab3f416fba8
+  rect:
+    serializedVersion: 2
+    x: 219
+    y: 128
+    width: 200
+    height: 100
+  onEnterActions: 
+  onExitActions: 00000000
+  condition:
+    and: []
+--- !u!114 &8067439663179234552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe3a9293e80eddc41a48c80d620d2557, type: 3}
+  m_Name: f8230ec3-f09c-464c-9b06-8dadd167674b
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: "You\u2019re crazy!"
+  children:
+  - 7f682947-e235-4535-8d24-e9dd097a9ba1
+  rect:
+    serializedVersion: 2
+    x: 220
+    y: 227
+    width: 200
+    height: 100
+  onEnterActions: 
+  onExitActions: 
+  condition:
+    and: []

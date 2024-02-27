@@ -1,0 +1,205 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8495010046473545104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe3a9293e80eddc41a48c80d620d2557, type: 3}
+  m_Name: c75e2ef3-34ee-46e3-bd68-1e9d71596ffa
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: "Finish up your walk, it\u2019ll be time to go back to bed soon. You must
+    be tired after all this excitement."
+  children:
+  - 6edc03a6-3fba-4f71-aa35-680faccd9d9a
+  - 9076053d-a4f0-4e6b-96cf-f5f1557b103c
+  - ea31f865-8cc0-4f5b-bb70-e9106a3e72b8
+  rect:
+    serializedVersion: 2
+    x: -1.0000076
+    y: 70.00001
+    width: 200
+    height: 100
+  onEnterActions: 
+  onExitActions: 
+  condition:
+    and: []
+--- !u!114 &-8301450160239825346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe3a9293e80eddc41a48c80d620d2557, type: 3}
+  m_Name: ea5364f0-bf81-4122-8d17-426dc6a2d585
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: "I\u2019m sure. Frailty is to be expected for one with your condition."
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 459
+    y: 18
+    width: 200
+    height: 100
+  onEnterActions: 
+  onExitActions: 
+  condition:
+    and: []
+--- !u!114 &-4470644854147052929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe3a9293e80eddc41a48c80d620d2557, type: 3}
+  m_Name: 8b285b16-180d-4e14-8ac7-d291b152aac3
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: 'Poor girl, perhaps the wallpaper is a tad bit too stimulating for a fragile
+    creature like you. You really should be resting. '
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 419
+    y: 235
+    width: 200
+    height: 100
+  onEnterActions: 
+  onExitActions: 
+  condition:
+    and: []
+--- !u!114 &-2725491946936478492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe3a9293e80eddc41a48c80d620d2557, type: 3}
+  m_Name: d198e2d5-ac37-4877-b6f6-4ab3f416fba8
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: 'Our research shows that any more exercise will overwhelm your delicate constitution. '
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 458
+    y: 128
+    width: 200
+    height: 100
+  onEnterActions: 
+  onExitActions: 
+  condition:
+    and: []
+--- !u!114 &-528162180611714140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe3a9293e80eddc41a48c80d620d2557, type: 3}
+  m_Name: ea31f865-8cc0-4f5b-bb70-e9106a3e72b8
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: "I can\u2019t go yet, I need to follow the pattern."
+  children:
+  - 8b285b16-180d-4e14-8ac7-d291b152aac3
+  rect:
+    serializedVersion: 2
+    x: 219
+    y: 235
+    width: 200
+    height: 100
+  onEnterActions: 
+  onExitActions: 02000000
+  condition:
+    and: []
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a835619fdf382d64ab80de894b7885ea, type: 3}
+  m_Name: Dr Carver
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: -8495010046473545104}
+  - {fileID: 4092545355264075669}
+  - {fileID: 5420945262881527025}
+  - {fileID: -2725491946936478492}
+  - {fileID: -8301450160239825346}
+  - {fileID: -528162180611714140}
+  - {fileID: -4470644854147052929}
+--- !u!114 &4092545355264075669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe3a9293e80eddc41a48c80d620d2557, type: 3}
+  m_Name: 6edc03a6-3fba-4f71-aa35-680faccd9d9a
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: I am quite tired.
+  children:
+  - ea5364f0-bf81-4122-8d17-426dc6a2d585
+  rect:
+    serializedVersion: 2
+    x: 220
+    y: 20
+    width: 200
+    height: 100
+  onEnterActions: 
+  onExitActions: 01000000
+  condition:
+    and: []
+--- !u!114 &5420945262881527025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe3a9293e80eddc41a48c80d620d2557, type: 3}
+  m_Name: 9076053d-a4f0-4e6b-96cf-f5f1557b103c
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: "But it\u2019s been such a short walk."
+  children:
+  - d198e2d5-ac37-4877-b6f6-4ab3f416fba8
+  rect:
+    serializedVersion: 2
+    x: 219
+    y: 128
+    width: 200
+    height: 100
+  onEnterActions: 
+  onExitActions: 00000000
+  condition:
+    and: []
