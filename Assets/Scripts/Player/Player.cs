@@ -76,6 +76,7 @@ public class Player : MonoBehaviour
     {
         if(collision.gameObject.tag == "Door")
         {
+            Debug.Log("Player collided with door");
             gameObject.transform.position = new Vector3(0, 0, zOffset * HallwayNumber);
         }
     }
