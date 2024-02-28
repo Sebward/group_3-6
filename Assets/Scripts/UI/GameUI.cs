@@ -13,6 +13,14 @@ public class GameUI : MonoBehaviour
         foreach (Transform screen in gameObject.transform)
         {
             UIScreens.Add(screen.gameObject);
+
+            if (screen.name == "Screen Overlay")
+            {
+                foreach (Transform subscreen in screen.transform)
+                {
+                    UIScreens.Add(subscreen.gameObject);
+                }
+            }
         }
 
         // Get game manager
@@ -42,7 +50,8 @@ public class GameUI : MonoBehaviour
         {
             if (screen.name == screenName)
             {
-                return screen.activeInHierarchy;
+                Debug.Log(screen.activeSelf);
+                return screen.activeSelf;
             }
         }
 
