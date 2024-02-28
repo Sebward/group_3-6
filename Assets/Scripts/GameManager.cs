@@ -6,9 +6,11 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     private static GameManager instance;
+    private GameUI gameUI;
     
     void Start()
     {
+        // Set up game manager.
         if (instance == null)
         {
             // Makes gamemanager persistent.
@@ -20,14 +22,17 @@ public class GameManager : MonoBehaviour
             // Prevents duplicate instances of the game manager.
             Destroy(gameObject);
         }
+
+        // Set up GameUI reference.
+        gameUI = GameObject.FindObjectOfType<GameUI>();
     }
 
     void Update()
     {
-        // Quit game if escape is pressed.
-        if (Input.GetKeyDown(KeyCode.Escape))
+        // Pause game if escape is pressed.
+        if (Input.GetKeyDown(KeyCode.Escape) && !gameUI.IsScreenActive("Start Screen"))
         {
-            Quit();
+            gameUI.SetScreenActive("Pause Screen", !gameUI.IsScreenActive("Pause Screen"));
         }
     }
 
@@ -35,6 +40,9 @@ public class GameManager : MonoBehaviour
     {
         // Assumes only one scene -- update here otherwise!
         SceneManager.LoadScene("TogetherScene");
+
+        // Find new references since scene was updated.
+        Start();
     }
 
     public void Quit()
