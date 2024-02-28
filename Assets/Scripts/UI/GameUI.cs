@@ -50,7 +50,6 @@ public class GameUI : MonoBehaviour
         {
             if (screen.name == screenName)
             {
-                Debug.Log(screen.activeSelf);
                 return screen.activeSelf;
             }
         }

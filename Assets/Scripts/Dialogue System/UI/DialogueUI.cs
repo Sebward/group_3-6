@@ -11,9 +11,11 @@ namespace Game.UI
     public class DialogueUI : MonoBehaviour
     {
         PlayerConversant playerConversant;
+        private float textSpeed = 0.02f;
         [SerializeField] TextMeshProUGUI speakerText;
 
         [SerializeField] Button button;
+        [SerializeField] Image buttonImage;
         [SerializeField] Sprite continueSprite;
         [SerializeField] Sprite skipSprite;
         [SerializeField] Sprite quitSprite;
@@ -61,6 +63,7 @@ namespace Game.UI
                 // Exit Dialogue
                 playerConversant.Quit();
                 gameObject.SetActive(false);
+                button.gameObject.SetActive(false);
             }
         }
 
@@ -71,6 +74,7 @@ namespace Game.UI
             // Activate text UI or choice UI
             textResponse.SetActive(!playerConversant.IsChoosing());
             button.gameObject.SetActive(!playerConversant.IsChoosing());
+            buttonImage.gameObject.SetActive(!playerConversant.IsChoosing());
             choiceRoot.gameObject.SetActive(playerConversant.IsChoosing());
 
             // Set name
@@ -91,8 +95,6 @@ namespace Game.UI
             {
                 BuildTextResponse();
             }
-
-            
         }
 
         private void BuildTextResponse()
@@ -111,15 +113,15 @@ namespace Game.UI
             // Change look of button when at end of dialogue
             if (!textFullyDisplayed)
             {
-                button.gameObject.GetComponent<Image>().sprite = skipSprite;
+                buttonImage.sprite = skipSprite;
             }
             else if (!playerConversant.HasNext())
             {
-                button.gameObject.GetComponent<Image>().sprite = quitSprite;
+                buttonImage.sprite = quitSprite;
             }
             else
             {
-                button.gameObject.GetComponent<Image>().sprite = continueSprite;
+                buttonImage.sprite = continueSprite;
             }
         }
 
@@ -178,12 +180,17 @@ namespace Game.UI
                     speakerText.text += text[textIndex];
                     textIndex++;
 
-                    yield return new WaitForSeconds(0.05f);
+                    yield return new WaitForSeconds(textSpeed);
                 }
             }
 
             textFullyDisplayed = true;
             UpdateNextButton();
+        }
+
+        public void SetTextSpeed(float speed)
+        {
+            textSpeed = speed;
         }
     }
 }
