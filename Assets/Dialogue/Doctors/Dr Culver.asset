@@ -1,0 +1,205 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8495010046473545104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe3a9293e80eddc41a48c80d620d2557, type: 3}
+  m_Name: c75e2ef3-34ee-46e3-bd68-1e9d71596ffa
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: How are you feeling today? Any better?
+  children:
+  - 6edc03a6-3fba-4f71-aa35-680faccd9d9a
+  - 9076053d-a4f0-4e6b-96cf-f5f1557b103c
+  - 5ff37bfd-50ef-4f6a-a0b4-75533bfdc26a
+  rect:
+    serializedVersion: 2
+    x: -1.0000076
+    y: 70.00001
+    width: 200
+    height: 100
+  onEnterActions: 
+  onExitActions: 
+  condition:
+    and: []
+--- !u!114 &-8301450160239825346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe3a9293e80eddc41a48c80d620d2557, type: 3}
+  m_Name: ea5364f0-bf81-4122-8d17-426dc6a2d585
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: "I\u2019m glad to hear it!"
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 459
+    y: 24
+    width: 200
+    height: 100
+  onEnterActions: 
+  onExitActions: 
+  condition:
+    and: []
+--- !u!114 &-2725491946936478492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe3a9293e80eddc41a48c80d620d2557, type: 3}
+  m_Name: d198e2d5-ac37-4877-b6f6-4ab3f416fba8
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: "Nonsense! The dim light is good for your eyes, prevents irritation. I think
+    you\u2019ll find the low light soothing, once you\u2019re ready to heal."
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 458
+    y: 127
+    width: 200
+    height: 100
+  onEnterActions: 
+  onExitActions: 
+  condition:
+    and: []
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a835619fdf382d64ab80de894b7885ea, type: 3}
+  m_Name: Dr Culver
+  m_EditorClassIdentifier: 
+  nodes:
+  - {fileID: -8495010046473545104}
+  - {fileID: 4092545355264075669}
+  - {fileID: 5420945262881527025}
+  - {fileID: -2725491946936478492}
+  - {fileID: -8301450160239825346}
+  - {fileID: 8816118414919432504}
+  - {fileID: 1107404899296723835}
+--- !u!114 &1107404899296723835
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe3a9293e80eddc41a48c80d620d2557, type: 3}
+  m_Name: 369d4b63-6be1-4672-bd29-ed8838e62687
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: "Stimulating isn\u2019t it! The pattern provides the necessary enrichment
+    to strengthen a fragile mind, while the sunny yellow hue improves the humors."
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 458
+    y: 234
+    width: 200
+    height: 100
+  onEnterActions: 
+  onExitActions: 
+  condition:
+    and: []
+--- !u!114 &4092545355264075669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe3a9293e80eddc41a48c80d620d2557, type: 3}
+  m_Name: 6edc03a6-3fba-4f71-aa35-680faccd9d9a
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: Yes, much better.
+  children:
+  - ea5364f0-bf81-4122-8d17-426dc6a2d585
+  rect:
+    serializedVersion: 2
+    x: 223
+    y: 24
+    width: 200
+    height: 100
+  onEnterActions: 
+  onExitActions: 01000000
+  condition:
+    and: []
+--- !u!114 &5420945262881527025
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe3a9293e80eddc41a48c80d620d2557, type: 3}
+  m_Name: 9076053d-a4f0-4e6b-96cf-f5f1557b103c
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: "It\u2019s too dark, I keep thinking I\u2019m seeing things in the shadows."
+  children:
+  - d198e2d5-ac37-4877-b6f6-4ab3f416fba8
+  rect:
+    serializedVersion: 2
+    x: 219
+    y: 128
+    width: 200
+    height: 100
+  onEnterActions: 
+  onExitActions: 02000000
+  condition:
+    and: []
+--- !u!114 &8816118414919432504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe3a9293e80eddc41a48c80d620d2557, type: 3}
+  m_Name: 5ff37bfd-50ef-4f6a-a0b4-75533bfdc26a
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: "The wallpaper is a bit\u2026 loud."
+  children:
+  - 369d4b63-6be1-4672-bd29-ed8838e62687
+  rect:
+    serializedVersion: 2
+    x: 218
+    y: 234
+    width: 200
+    height: 100
+  onEnterActions: 
+  onExitActions: 
+  condition:
+    and: []
