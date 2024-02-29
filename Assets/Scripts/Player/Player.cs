@@ -2,6 +2,7 @@ using Game.Dialogue;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
@@ -15,13 +16,31 @@ public class Player : MonoBehaviour
     public float zOffset = 0;
     public int HallwayNumber = 0;
 
+    //UI
+    public GameObject startScreen;
+    public GameObject dayUI;
+    public GameObject playerUI;
+    public GameObject clickUI;
+    public GameObject mouseUI;
+    public bool isHovering;
+
+    private bool isLocked;
+    private bool canMove;
+
     private float rotationX = 0;
     private float rotationY = 0;
     private FadeInOut fadeInOut;
     // Start is called before the first frame update
     void Start()
     {
+        //UI and Mouse States
         Cursor.lockState = CursorLockMode.Confined;
+        isLocked = false;
+        isHovering = false;
+        canMove = false;
+        clickUI.transform.position = new Vector3(Screen.width * 0.5f, Screen.height * 0.5f, 0);
+        mouseUI.transform.position = new Vector3(Screen.width * 0.5f, Screen.height * 0.5f, 0);
+
         playerConversant = gameObject.GetComponent<PlayerConversant>();
         playerSanitySystem = gameObject.GetComponent<SanitySystem>();
         fadeInOut = FindObjectOfType<FadeInOut>();
@@ -38,7 +57,8 @@ public class Player : MonoBehaviour
     //Player movement
     void UpdateMovement()
     {
-        if (playerConversant.GetCurrentDialogue() == null)
+        //if (playerConversant.GetCurrentDialogue() == null)
+        if (canMove)
         {
             if (Input.GetKey(KeyCode.W))
             {
@@ -74,14 +94,14 @@ public class Player : MonoBehaviour
 
     }
 
-    private void OnCollisionEnter(Collision collision)
+/*    private void OnCollisionEnter(Collision collision)
     {
         if(collision.gameObject.tag == "Door")
         {
             Debug.Log("Player collided with door");
             gameObject.transform.position = new Vector3(0, 0, zOffset * HallwayNumber);
         }
-    }
+    }*/
 
     public void SanityCheck()
     {
@@ -125,6 +145,50 @@ public class Player : MonoBehaviour
         gameObject.transform.position += new Vector3(xOffset, 0, zOffset);
     }
 
+    public void ResetHallway()
+    {
+        gameObject.transform.position = new Vector3(0, 2, zOffset * HallwayNumber);
+    }
+
+    public void LockCursor()
+    {
+        if (isLocked)
+        {
+            Cursor.lockState = CursorLockMode.None;
+            playerUI.SetActive(false);
+            isLocked = false;
+            canMove = false;
+        }
+        else
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            playerUI.SetActive(true);
+            HandUI();
+            isLocked = true;
+            canMove = true;
+        }
+    }
+
+    public void HandUI()
+    {
+        if (isHovering)
+        {
+            clickUI.SetActive(true);
+            mouseUI.SetActive(false);
+
+        }
+        else
+        {
+            clickUI.SetActive(false);
+            mouseUI.SetActive(true);
+        }
+    }
+
+    public void Intro()
+    {
+        StartCoroutine(IntroEnum());
+    }
+
     public IEnumerator Fade()
     {
         fadeInOut.FadeIn();
@@ -132,5 +196,21 @@ public class Player : MonoBehaviour
         ChangeHallway();
         yield return new WaitForSeconds(3);
         fadeInOut.FadeOut();
+    }
+
+    private IEnumerator IntroEnum()
+    {
+        fadeInOut.FadeIn();
+        yield return new WaitForSeconds(1.5f);
+        //Set text to active
+        startScreen.SetActive(false);
+        dayUI.SetActive(true);
+        yield return new WaitForSeconds(2f);
+        //Deactivate text
+        dayUI.SetActive(false);
+        //Reset location
+        yield return new WaitForSeconds(0.5f);
+        fadeInOut.FadeOut();
+        LockCursor();
     }
 }

@@ -29,6 +29,8 @@ namespace Game.UI
         private Coroutine displayTextCoroutine;
         private bool textFullyDisplayed = false;
 
+        Player player;
+
         void Start()
         {
             playerConversant = GameObject.Find("Player").GetComponent<PlayerConversant>();
@@ -39,6 +41,9 @@ namespace Game.UI
             // Initialize the UI and inactivate it
             UpdateUI();
             gameObject.SetActive(false);
+
+            //Get access to player to lock/unlock cursor
+            player = GameObject.Find("Player").GetComponent<Player>() as Player;
         }
 
         // Continues dialogue, updating UI
@@ -61,6 +66,7 @@ namespace Game.UI
             else
             {
                 // Exit Dialogue
+                player.LockCursor();
                 playerConversant.Quit();
                 gameObject.SetActive(false);
                 button.gameObject.SetActive(false);
