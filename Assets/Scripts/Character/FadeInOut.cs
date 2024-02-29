@@ -9,11 +9,13 @@ public class FadeInOut : MonoBehaviour
     public bool fadeIn = false;
     public bool fadeOut = false;
 
+    Player player;
+
     public float TimeToFade;
     // Start is called before the first frame update
     void Start()
     {
-        
+        player = GameObject.Find("Player").GetComponent<Player>() as Player;
     }
 
     // Update is called once per frame
@@ -46,10 +48,12 @@ public class FadeInOut : MonoBehaviour
     public void FadeIn()
     {
         fadeIn = true;
+        player.playerUI.SetActive(false);
     }
 
     public void FadeOut()
     {
         fadeOut = true;
+        player.playerUI.SetActive(true);
     }
 }

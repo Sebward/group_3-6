@@ -9,12 +9,20 @@ namespace Game.Dialogue
         PlayerConversant playerConversant;
         AIConversant aIConversant;
         GameUI gameUI;
+        Player player;
 
-        void Start()
+        void Awake()
         {
             playerConversant = GameObject.FindObjectOfType<PlayerConversant>();
             aIConversant = gameObject.GetComponent<AIConversant>();
             gameUI = GameObject.FindObjectOfType<GameUI>();
+            player = GameObject.Find("Player").GetComponent<Player>() as Player;
+        }
+
+        void OnMouseEnter()
+        {
+            player.isHovering = true;
+            player.HandUI();
         }
 
         private void OnMouseOver()
@@ -36,6 +44,13 @@ namespace Game.Dialogue
         private void OnMouseExit()
         {
             gameUI.SetScreenActive("Interact Popup", false);
+            player.LockCursor();            
+        }
+
+        void OnMouseExit()
+        {
+            player.isHovering = false;
+            player.HandUI();
         }
     }
 }
