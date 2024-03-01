@@ -8,7 +8,9 @@ public class Player : MonoBehaviour
 {
 
     [SerializeField] float mouseSensitivity = 3f;
-    [SerializeField] float movementSpeed = 20f;
+    private Vector3 PlayerMovementInput;
+    [SerializeField] float speed;
+    [SerializeField] private Rigidbody rb;
     [SerializeField] Transform cameraTransform;
     PlayerConversant playerConversant;
     SanitySystem playerSanitySystem;
@@ -49,6 +51,7 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        PlayerMovementInput = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
         UpdateMovement();
         UpdateLook();
         //SanityCheck();
@@ -60,10 +63,8 @@ public class Player : MonoBehaviour
         //if (playerConversant.GetCurrentDialogue() == null)
         if (canMove)
         {
-            if (Input.GetKey(KeyCode.W))
-            {
-                transform.position += Vector3.right * movementSpeed * Time.deltaTime;
-            }
+            Vector3 MoveVector = transform.TransformDirection(PlayerMovementInput) * speed;
+            rb.velocity = new Vector3(MoveVector.x, rb.velocity.y, MoveVector.z);
         }
     }
 
