@@ -18,6 +18,7 @@ namespace Game.Dialogue
         bool isChoosing = false;
         bool hasSingleChoice = false;
 
+        private CursorState cursorState;
 
         public event Action onConversationUpdated;
 
@@ -26,11 +27,16 @@ namespace Game.Dialogue
             // Activate the UI for setup
             DialogueUI.SetActive(true);
             player = gameObject.GetComponent<Player>();
+
+            // Set up cursor
+            cursorState = FindObjectOfType<CursorState>();
         }
 
         // Starts the given dialogue through the AIConversant
         public void StartDialogue(AIConversant newConversant, Dialogue newDialogue)
         {
+            cursorState.SetCursorLock(false);
+            cursorState.SetCursorState(CursorType.Default);
             DialogueUI.SetActive(true);
             currentConversant = newConversant;
             currentDialogue = newDialogue;
@@ -42,6 +48,7 @@ namespace Game.Dialogue
         // Stops dialogue, resetting values
         public void Quit()
         {
+            cursorState.SetCursorLock(true);
             currentDialogue = null;
             TriggerExitActions();
             currentNode = null;

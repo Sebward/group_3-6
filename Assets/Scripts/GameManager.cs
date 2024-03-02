@@ -7,6 +7,7 @@ public class GameManager : MonoBehaviour
 {
     private static GameManager instance;
     private GameUI gameUI;
+    private CursorState cursorState;
     
     void Start()
     {
@@ -25,6 +26,7 @@ public class GameManager : MonoBehaviour
 
         // Set up GameUI reference.
         gameUI = GameObject.FindObjectOfType<GameUI>();
+        cursorState = GameObject.FindObjectOfType<CursorState>();
     }
 
     void Update()
@@ -33,13 +35,14 @@ public class GameManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape) && !gameUI.IsScreenActive("Start Screen"))
         {
             gameUI.SetScreenActive("Pause Screen", !gameUI.IsScreenActive("Pause Screen"));
+            cursorState.SetCursorLock(!gameUI.IsScreenActive("Pause Screen"));
         }
     }
 
     public void Restart()
     {
         // Assumes only one scene -- update here otherwise!
-        SceneManager.LoadScene("TogetherScene");
+        SceneManager.LoadScene(0);
 
         // Find new references since scene was updated.
         Start();
