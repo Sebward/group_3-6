@@ -44,9 +44,22 @@ public class CursorState : MonoBehaviour
     public void SetCursorState(CursorType cursorType)
     {
         if (lockState) return;
-        this.cursorType = cursorType;
-        this.cursorTexture = textures[(int)cursorType];
+
+        // Determine if dot should be shown instead
+        if (cursorType == CursorType.Default && !gameUI.InMenu())
+        {
+            this.cursorType = CursorType.Dot;
+            this.cursorTexture = textures[(int)CursorType.Dot];
+        }
+        // Otherwise set cursor to the desired type
+        else
+        {
+            this.cursorType = cursorType;
+            this.cursorTexture = textures[(int)cursorType];
+        }
+
         Cursor.SetCursor(cursorTexture, Vector2.zero, CursorMode.Auto);
+        Cursor.visible = true; // Ensure cursor is set to visible
     }
 
     public CursorType GetCursorState()
@@ -66,5 +79,7 @@ public class CursorState : MonoBehaviour
         {
             Cursor.lockState = CursorLockMode.None;
         }
+
+        SetCursorState(cursorType);
     }
 }

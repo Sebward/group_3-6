@@ -141,6 +141,7 @@ public class Player : MonoBehaviour
 
     public void Intro()
     {
+        cursorState.SetCursorLock(true);
         StartCoroutine(IntroEnum());
     }
 
@@ -166,5 +167,6 @@ public class Player : MonoBehaviour
         //Reset location
         yield return new WaitForSeconds(0.5f);
         fadeInOut.FadeOut();
+        cursorState.SetCursorState(CursorType.Default);
     }
 }
