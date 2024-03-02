@@ -7,8 +7,11 @@ using UnityEngine.UI;
 public class Player : MonoBehaviour
 {
 
-    [SerializeField] float mouseSensitivity = 3f;
+    //[SerializeField] float mouseSensitivity = 3f;
     private Vector3 PlayerMovementInput;
+    /*private Vector2 PlayerMouseInput;
+    private float xRot;*/
+    [SerializeField] private float mouseSensitivity;
     [SerializeField] float speed;
     [SerializeField] private Rigidbody rb;
     [SerializeField] Transform cameraTransform;
@@ -72,27 +75,22 @@ public class Player : MonoBehaviour
     //Mouse Look at x and y directions
     void UpdateLook()
     {
-        /*if (playerConversant.GetCurrentDialogue() == null)
-        {
-            //Input.mousePosition.Set(0, 0, 0);
-            rotationX -= Input.GetAxis("Mouse Y") * mouseSensitivity;
-            rotationX = Mathf.Clamp(rotationX, -90.0f, 90f);
-            cameraTransform.transform.localRotation = Quaternion.Euler(rotationX, 0, 0);
-            transform.rotation *= Quaternion.Euler(0, Input.GetAxis("Mouse X") * mouseSensitivity, 0);
-        }*/
         if (playerConversant.GetCurrentDialogue() == null)
         {
             rotationX -= Input.GetAxis("Mouse Y") * mouseSensitivity;
             rotationX = Mathf.Clamp(rotationX, -90.0f, 90.0f);
 
             rotationY += Input.GetAxis("Mouse X") * mouseSensitivity;
-            rotationY = Mathf.Clamp(rotationY, -20.0f, 180.0f);
+            //rotationY = Mathf.Clamp(rotationY, -20.0f, 180.0f);
 
             cameraTransform.transform.localRotation = Quaternion.Euler(rotationX, 0, 0);
             transform.rotation = Quaternion.Euler(0, rotationY, 0);
         }
-
-
+        else
+        {
+            //cameraTransform.transform.localRotation = Quaternion.Euler(rotationX, 0, 0);
+            transform.rotation = Quaternion.Euler(0, 90, 0);
+        }
     }
 
 /*    private void OnCollisionEnter(Collision collision)
