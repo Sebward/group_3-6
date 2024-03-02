@@ -7339,7 +7339,7 @@ GameObject:
   - component: {fileID: 7105123528418022834}
   - component: {fileID: 5194698096359509347}
   m_Layer: 5
-  m_Name: Quit Confirmation
+  m_Name: Quit Confirmation Screen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7443,7 +7443,7 @@ GameObject:
   - component: {fileID: 6463733676242591536}
   - component: {fileID: 878817164114720775}
   m_Layer: 5
-  m_Name: Screen Overlay
+  m_Name: Player Overlay
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

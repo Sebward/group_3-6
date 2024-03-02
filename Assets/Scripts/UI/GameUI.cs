@@ -6,6 +6,7 @@ public class GameUI : MonoBehaviour
 {
     GameManager gameManager;
     private List<GameObject> UIScreens = new List<GameObject>();
+    private bool inMenu = true;
 
     void Start()
     {
@@ -14,7 +15,7 @@ public class GameUI : MonoBehaviour
         {
             UIScreens.Add(screen.gameObject);
 
-            if (screen.name == "Screen Overlay")
+            if (screen.name == "Player Overlay")
             {
                 foreach (Transform subscreen in screen.transform)
                 {
@@ -27,19 +28,44 @@ public class GameUI : MonoBehaviour
         gameManager = GameObject.FindObjectOfType<GameManager>();
     }
 
+    void Update()
+    {
+        IsAnyMenuActive();
+    }
+
     // Sets the given screen to active or inactive
     public void SetScreenActive(string screenName, bool setActive)
     {
         foreach (GameObject screen in UIScreens)
         {
             if (screen.name == screenName)
-            {
+            {  
                 screen.SetActive(setActive);
                 return;
             }
         }
 
         Debug.Log("GameUI.cs: Screen " + screenName + " not found!");
+    }
+
+    // Helper method to SetScreenActive
+    private void IsAnyMenuActive()
+    {
+        foreach (GameObject screen in UIScreens)
+        {
+            if (screen.activeSelf && screen.name.Contains("Screen"))
+            {
+                inMenu = true;
+                return;
+            }
+        }
+
+        inMenu = false;
+    }
+
+    public bool InMenu()
+    {
+        return inMenu;
     }
 
     // Returns a boolean whether the screen is active
