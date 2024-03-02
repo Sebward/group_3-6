@@ -2,17 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum CursorType
+{
+    Default,
+    DefaultHover,
+    Dot,
+    DoorInteract,
+    DialogueInteract
+}
+
 public class CursorState : MonoBehaviour
 {
-    public enum CursorType
-    {
-        Default,
-        DefaultHover,
-        Dot,
-        DialogueInteract,
-        DoorInteract
-    }
-
     [SerializeField] private Texture2D[] textures;
 
     private CursorType cursorType = CursorType.Default;
@@ -29,6 +29,11 @@ public class CursorState : MonoBehaviour
         this.cursorType = cursorType;
         this.cursorTexture = textures[(int)cursorType];
         Cursor.SetCursor(cursorTexture, Vector2.zero, CursorMode.Auto);
+    }
+
+    public CursorType GetCursorState()
+    {
+        return cursorType;
     }
 
     public void SetCursorLock(bool isLocked)

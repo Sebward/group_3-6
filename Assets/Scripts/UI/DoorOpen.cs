@@ -8,19 +8,19 @@ public class DoorOpen : MonoBehaviour
     [SerializeField] private LayerMask layerMaskInteract;
     [SerializeField] private string excludeLayerName = null;
 
+
     private MyDoorController rayCastedObj;
+    private CursorState cursorState;
     /*private bool doOnce;*/
 
     [SerializeField] private KeyCode openDoorKey = KeyCode.E;
     private const string doorTag = "OnboardingDoor";
 
-    // Start is called before the first frame update
     void Start()
     {
-        
+        cursorState = GameObject.FindObjectOfType<CursorState>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         RaycastHit hit;
@@ -31,11 +31,19 @@ public class DoorOpen : MonoBehaviour
         {
             if (hit.collider.CompareTag(doorTag))
             {
+                cursorState.SetCursorState(CursorType.DoorInteract);
                 rayCastedObj = hit.collider.gameObject.GetComponent<MyDoorController>();
                 if(Input.GetKeyDown(openDoorKey))
                 {
                     rayCastedObj.PlayAnimation();
                 }
+            }
+        }
+        else
+        {
+            if (cursorState.GetCursorState() == CursorType.DoorInteract)
+            {
+                cursorState.SetCursorState(CursorType.Default);
             }
         }
     }
