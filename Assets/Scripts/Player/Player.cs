@@ -21,34 +21,25 @@ public class Player : MonoBehaviour
     public float zOffset = 0;
     public int HallwayNumber = 0;
 
+    // Cursor
+    CursorState cursorState;
+
     //UI
     public GameObject startScreen;
     public GameObject dayUI;
-    public GameObject playerUI;
-    public GameObject clickUI;
-    public GameObject mouseUI;
-    public bool isHovering;
-
-    private bool isLocked;
-    private bool canMove;
 
     private float rotationX = 0;
     private float rotationY = 0;
     private FadeInOut fadeInOut;
+
     // Start is called before the first frame update
     void Start()
     {
         //UI and Mouse States
-        Cursor.lockState = CursorLockMode.Confined;
-        isLocked = false;
-        isHovering = false;
-        canMove = false;
-        clickUI.transform.position = new Vector3(Screen.width * 0.5f, Screen.height * 0.5f, 0);
-        mouseUI.transform.position = new Vector3(Screen.width * 0.5f, Screen.height * 0.5f, 0);
-
         playerConversant = gameObject.GetComponent<PlayerConversant>();
         playerSanitySystem = gameObject.GetComponent<SanitySystem>();
         fadeInOut = FindObjectOfType<FadeInOut>();
+        cursorState = FindObjectOfType<CursorState>();
     }
 
     // Update is called once per frame
@@ -63,8 +54,7 @@ public class Player : MonoBehaviour
     //Player movement
     void UpdateMovement()
     {
-        //if (playerConversant.GetCurrentDialogue() == null)
-        if (canMove)
+        if (playerConversant.GetCurrentDialogue() == null)
         {
             Vector3 MoveVector = transform.TransformDirection(PlayerMovementInput) * speed;
             rb.velocity = new Vector3(MoveVector.x, rb.velocity.y, MoveVector.z);
@@ -75,7 +65,7 @@ public class Player : MonoBehaviour
     //Mouse Look at x and y directions
     void UpdateLook()
     {
-        if (playerConversant.GetCurrentDialogue() == null)
+        if (playerConversant == null || playerConversant.GetCurrentDialogue() == null)
         {
             rotationX -= Input.GetAxis("Mouse Y") * mouseSensitivity;
             rotationX = Mathf.Clamp(rotationX, -90.0f, 90.0f);
@@ -149,40 +139,6 @@ public class Player : MonoBehaviour
         gameObject.transform.position = new Vector3(0, 2, zOffset * HallwayNumber);
     }
 
-    public void LockCursor()
-    {
-        if (isLocked)
-        {
-            Cursor.lockState = CursorLockMode.None;
-            playerUI.SetActive(false);
-            isLocked = false;
-            canMove = false;
-        }
-        else
-        {
-            Cursor.lockState = CursorLockMode.Locked;
-            playerUI.SetActive(true);
-            HandUI();
-            isLocked = true;
-            canMove = true;
-        }
-    }
-
-    public void HandUI()
-    {
-        if (isHovering)
-        {
-            clickUI.SetActive(true);
-            mouseUI.SetActive(false);
-
-        }
-        else
-        {
-            clickUI.SetActive(false);
-            mouseUI.SetActive(true);
-        }
-    }
-
     public void Intro()
     {
         StartCoroutine(IntroEnum());
@@ -210,6 +166,5 @@ public class Player : MonoBehaviour
         //Reset location
         yield return new WaitForSeconds(0.5f);
         fadeInOut.FadeOut();
-        LockCursor();
     }
 }

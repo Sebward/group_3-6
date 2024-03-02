@@ -48,12 +48,10 @@ public class FadeInOut : MonoBehaviour
     public void FadeIn()
     {
         fadeIn = true;
-        player.playerUI.SetActive(false);
     }
 
     public void FadeOut()
     {
         fadeOut = true;
-        player.playerUI.SetActive(true);
     }
 }

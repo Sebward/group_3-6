@@ -66,7 +66,6 @@ namespace Game.UI
             else
             {
                 // Exit Dialogue
-                player.LockCursor();
                 playerConversant.Quit();
                 gameObject.SetActive(false);
                 button.gameObject.SetActive(false);

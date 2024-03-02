@@ -38,7 +38,6 @@ public class EndScreenTrigger : MonoBehaviour
                 dayText.text = "Day " + dayTracker.Day;
                 StartCoroutine(Fade());
             }
-            player.LockCursor();
         }
     }
 
@@ -61,6 +60,5 @@ public class EndScreenTrigger : MonoBehaviour
         yield return new WaitForSeconds(0.2f);
 
         fadeInOut.FadeOut();
-        player.LockCursor();
     }
 }
