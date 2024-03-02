@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Game.Dialogue;
 
 public enum CursorType
 {
@@ -16,6 +17,7 @@ public class CursorState : MonoBehaviour
     [SerializeField] private Texture2D[] textures;
 
     private GameUI gameUI;
+    private PlayerConversant playerConversant;
     private CursorType cursorType = CursorType.Default;
     private Texture2D cursorTexture;
     private bool lockCursor = false;
@@ -24,6 +26,7 @@ public class CursorState : MonoBehaviour
     void Start()
     {
         gameUI = GameObject.FindObjectOfType<GameUI>();
+        playerConversant = GameObject.FindObjectOfType<PlayerConversant>();
         SetCursorState(CursorType.Default);
     }
 
@@ -45,8 +48,13 @@ public class CursorState : MonoBehaviour
     {
         if (lockState) return;
 
+        if (playerConversant != null && playerConversant.GetCurrentDialogue() != null)
+        {
+            this.cursorType = CursorType.Default;
+            this.cursorTexture = textures[(int)CursorType.Default];
+        }
         // Determine if dot should be shown instead
-        if (cursorType == CursorType.Default && !gameUI.InMenu())
+        else if (cursorType == CursorType.Default && !gameUI.InMenu())
         {
             this.cursorType = CursorType.Dot;
             this.cursorTexture = textures[(int)CursorType.Dot];
