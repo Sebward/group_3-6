@@ -21,8 +21,7 @@ namespace Game.Dialogue
 
         void OnMouseEnter()
         {
-            player.isHovering = true;
-            player.HandUI();
+            
         }
 
         private void OnMouseOver()
@@ -38,15 +37,12 @@ namespace Game.Dialogue
             {
                 aIConversant.StartDialogue();
                 gameUI.SetScreenActive("Interact Popup", false);
-                player.LockCursor();
             }
         }
 
         private void OnMouseExit()
         {
-            gameUI.SetScreenActive("Interact Popup", false);
-            player.isHovering = false;
-            player.HandUI();           
+            gameUI.SetScreenActive("Interact Popup", false);           
         }
     }
 }
