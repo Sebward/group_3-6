@@ -4,7 +4,16 @@ using UnityEngine;
 
 public class DoorOpen : MonoBehaviour
 {
-    public GameObject door;
+    [SerializeField] private int rayLength = 5;
+    [SerializeField] private LayerMask layerMaskInteract;
+    [SerializeField] private string excludeLayerName = null;
+
+    private MyDoorController rayCastedObj;
+    /*private bool doOnce;*/
+
+    [SerializeField] private KeyCode openDoorKey = KeyCode.E;
+    private const string doorTag = "OnboardingDoor";
+
     // Start is called before the first frame update
     void Start()
     {
@@ -14,15 +23,20 @@ public class DoorOpen : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-    }
+        RaycastHit hit;
+        Vector3 fwd = transform.TransformDirection(Vector3.forward);
+        int mask = 1 << LayerMask.NameToLayer(excludeLayerName) | layerMaskInteract.value;
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.tag == "Player")
+        if (Physics.Raycast(transform.position, fwd, out hit, rayLength, mask))
         {
-            Debug.Log("Collision detected");
-            door.transform.rotation = Quaternion.Slerp(transform.rotation, Quaternion.Euler(0, 75, 0), 2 * Time.deltaTime);
+            if (hit.collider.CompareTag(doorTag))
+            {
+                rayCastedObj = hit.collider.gameObject.GetComponent<MyDoorController>();
+                if(Input.GetKeyDown(openDoorKey))
+                {
+                    rayCastedObj.PlayAnimation();
+                }
+            }
         }
     }
 }

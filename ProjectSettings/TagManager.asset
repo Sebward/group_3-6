@@ -5,12 +5,12 @@ TagManager:
   serializedVersion: 2
   tags:
   - Door
-  - Onboarding Door
+  - OnboardingDoor
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Interact
   - Water
   - UI
   - 
