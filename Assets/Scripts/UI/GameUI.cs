@@ -104,4 +104,9 @@ public class GameUI : MonoBehaviour
     {
         gameManager.Quit();
     }
+
+    public void Pause()
+    {
+        gameManager.Pause();
+    }
 }
