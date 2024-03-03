@@ -48,16 +48,22 @@ public class CursorState : MonoBehaviour
     {
         if (lockState) return;
 
+        // Set cursor to default if in dialogue
         if (playerConversant != null && playerConversant.GetCurrentDialogue() != null)
         {
             this.cursorType = CursorType.Default;
             this.cursorTexture = textures[(int)CursorType.Default];
         }
-        // Determine if dot should be shown instead
+        // Set cursor to dot if not in dialogue and not in menu
         else if (cursorType == CursorType.Default && !gameUI.InMenu())
         {
-            this.cursorType = CursorType.Dot;
-            this.cursorTexture = textures[(int)CursorType.Dot];
+            // CURRENTLY - not showing the dot due to bug
+            Cursor.visible = false;
+            return;
+
+            // Old code for dot
+            // this.cursorType = CursorType.Dot;
+            // this.cursorTexture = textures[(int)CursorType.Dot];
         }
         // Otherwise set cursor to the desired type
         else
@@ -88,6 +94,7 @@ public class CursorState : MonoBehaviour
             Cursor.lockState = CursorLockMode.None;
         }
 
-        SetCursorState(cursorType);
+        Cursor.SetCursor(cursorTexture, Vector2.zero, CursorMode.Auto);
+        Cursor.visible = true; 
     }
 }

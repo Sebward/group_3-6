@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     private static GameManager instance;
     private GameUI gameUI;
     private CursorState cursorState;
+    private bool paused;
     
     void Start()
     {
@@ -32,11 +33,24 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         // Pause game if escape is pressed.
-        if (Input.GetKeyDown(KeyCode.Escape) && !gameUI.IsScreenActive("Start Screen"))
+        if (Input.GetKeyDown(KeyCode.P) && !gameUI.IsScreenActive("Start Screen"))
         {
-            gameUI.SetScreenActive("Pause Screen", !gameUI.IsScreenActive("Pause Screen"));
-            if (!gameUI.IsScreenActive("Pause Screen")) gameUI.SetAllMenusActive(false);
-            cursorState.SetCursorLock(!gameUI.IsScreenActive("Pause Screen"));
+            paused = !paused;
+
+            if (paused)
+            {
+                // Show pause screen and disable lock.
+                gameUI.SetScreenActive("Pause Screen", true);
+                cursorState.SetCursorLock(false);
+            }
+            else
+            {
+                // Hide all menus (including pause) and enable lock.
+                gameUI.SetAllMenusActive(false);
+                cursorState.SetCursorLock(true);
+            }     
+
+            cursorState.SetCursorState(CursorType.Default);   
         }
     }
 
