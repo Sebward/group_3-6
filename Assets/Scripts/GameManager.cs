@@ -35,6 +35,7 @@ public class GameManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Escape) && !gameUI.IsScreenActive("Start Screen"))
         {
             gameUI.SetScreenActive("Pause Screen", !gameUI.IsScreenActive("Pause Screen"));
+            if (!gameUI.IsScreenActive("Pause Screen")) gameUI.SetAllMenusActive(false);
             cursorState.SetCursorLock(!gameUI.IsScreenActive("Pause Screen"));
         }
     }

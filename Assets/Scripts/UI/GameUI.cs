@@ -63,6 +63,17 @@ public class GameUI : MonoBehaviour
         inMenu = false;
     }
 
+    public void SetAllMenusActive(bool setActive)
+    {
+        foreach (GameObject screen in UIScreens)
+        {
+            if (screen.activeSelf && screen.name.Contains("Screen"))
+            {
+                screen.SetActive(setActive);
+            }
+        }
+    }
+
     public bool InMenu()
     {
         return inMenu;
