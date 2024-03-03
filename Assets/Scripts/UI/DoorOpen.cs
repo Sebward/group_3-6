@@ -11,6 +11,7 @@ public class DoorOpen : MonoBehaviour
 
     private MyDoorController rayCastedObj;
     private CursorState cursorState;
+    GameUI gameUI;
     /*private bool doOnce;*/
 
     [SerializeField] private KeyCode openDoorKey = KeyCode.E;
@@ -19,6 +20,7 @@ public class DoorOpen : MonoBehaviour
     void Start()
     {
         cursorState = GameObject.FindObjectOfType<CursorState>();
+        gameUI = GameObject.FindObjectOfType<GameUI>();
     }
 
     void Update()
@@ -32,6 +34,7 @@ public class DoorOpen : MonoBehaviour
             if (hit.collider.CompareTag(doorTag))
             {
                 cursorState.SetCursorState(CursorType.DoorInteract);
+                gameUI.SetScreenActive("Interact Popup", true);
                 rayCastedObj = hit.collider.gameObject.GetComponent<MyDoorController>();
                 if(Input.GetKeyDown(openDoorKey))
                 {
@@ -44,6 +47,7 @@ public class DoorOpen : MonoBehaviour
             if (cursorState.GetCursorState() == CursorType.DoorInteract)
             {
                 cursorState.SetCursorState(CursorType.Default);
+                gameUI.SetScreenActive("Interact Popup", false);
             }
         }
     }

@@ -26,6 +26,9 @@ public class GameUI : MonoBehaviour
 
         // Get game manager
         gameManager = GameObject.FindObjectOfType<GameManager>();
+
+        // Set interact to inactive
+        SetScreenActive("Interact Popup", false);
     }
 
     void Update()
