@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     private static GameManager instance;
     private GameUI gameUI;
     private CursorState cursorState;
+    private bool isPaused = false;
     
     void Start()
     {
@@ -32,12 +33,19 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         // Pause game if escape is pressed.
+        // BREAKS MOUSE LOCK when ESC is pressed in Editor. -- Works fine in build!
         if (Input.GetKeyDown(KeyCode.Escape) && !gameUI.IsScreenActive("Start Screen"))
         {
-            gameUI.SetScreenActive("Pause Screen", !gameUI.IsScreenActive("Pause Screen"));
-            if (!gameUI.IsScreenActive("Pause Screen")) gameUI.SetAllMenusActive(false);
-            cursorState.SetCursorLock(!gameUI.IsScreenActive("Pause Screen"));
+            Pause();
         }
+    }
+
+    public void Pause()
+    {
+        isPaused =!isPaused;
+        gameUI.SetScreenActive("Pause Screen", isPaused);
+        if (!isPaused) gameUI.SetAllMenusActive(false);
+        cursorState.SetCursorLock(!isPaused);
     }
 
     public void Restart()
