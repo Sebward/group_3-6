@@ -9,6 +9,9 @@ namespace Game.Dialogue
     {
         None,
         IncreaseSanity,
-        DecreaseSanity
+        DecreaseSanity,
+        IncreaseGoodChoiceCount,
+        IncreaseNeutralChoiceCount,
+        IncreaseBadChoiceCount
     }
 }

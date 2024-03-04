@@ -46,7 +46,7 @@ namespace Game.Core
         class Predicate
         {
             // Ideally, these fields are converted to enums that are based on surrounding systems like quests & inventory
-            [SerializeField] string predicate;
+            [SerializeField] eCondition predicate;
             [SerializeField] string[] parameters;
             [SerializeField] bool negate = false;
 

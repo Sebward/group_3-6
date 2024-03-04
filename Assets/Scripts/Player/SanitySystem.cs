@@ -1,7 +1,8 @@
 using System;
 using UnityEngine;
+using Game.Core;
 
-public class SanitySystem : MonoBehaviour
+public class SanitySystem : MonoBehaviour, IPredicateEvaluator
 {
     public float maxSanity = 100.0f;
     public float currentSanity;
@@ -23,7 +24,6 @@ public class SanitySystem : MonoBehaviour
         // Trigger the sanity changed event.
         OnSanityChanged?.Invoke(currentSanity);
         CheckSanityLevelEvents();
-        Debug.Log(currentSanity);
     }
 
     // return current sanity level || might be redundant
@@ -44,5 +44,27 @@ public class SanitySystem : MonoBehaviour
         {
             // Trigger high sanity event.
         }
+    }
+
+    // Evaluator for dialogue system condition.
+    public bool? Evaluate(eCondition predicate, string[] parameters)
+    {
+        if (predicate == eCondition.PlayerSanityGreaterThan)
+        {
+            return currentSanity > int.Parse(parameters[0]);
+        }
+
+        if (predicate == eCondition.PlayerSanityLessThan)
+        {
+            return currentSanity < int.Parse(parameters[0]);
+        }
+
+        if (predicate == eCondition.PlayerSanityEqualTo)
+        {
+            return currentSanity == int.Parse(parameters[0]);
+        }
+
+        // Otherwise, the requested predicate is not supported. -- Return null.
+        return null;
     }
 }

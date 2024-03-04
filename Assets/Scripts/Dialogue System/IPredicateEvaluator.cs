@@ -6,6 +6,6 @@ namespace Game.Core
 {
     public interface IPredicateEvaluator
     {
-        bool? Evaluate(string predicate, string[] parameters);
+        bool? Evaluate(eCondition predicate, string[] parameters);
     }
 }
