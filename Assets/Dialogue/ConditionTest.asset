@@ -17,8 +17,33 @@ MonoBehaviour:
   children: []
   rect:
     serializedVersion: 2
-    x: 552
-    y: 177.99997
+    x: 561
+    y: 101.999985
+    width: 200
+    height: 100
+  onEnterActions: 
+  onExitActions: 
+  condition:
+    and: []
+--- !u!114 &-5900700649690916184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe3a9293e80eddc41a48c80d620d2557, type: 3}
+  m_Name: 282ed0a9-44f8-4efc-a0ee-e72a2be0b386
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Yes, yes it is.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 553
+    y: 253.99998
     width: 200
     height: 100
   onEnterActions: 
@@ -65,9 +90,9 @@ MonoBehaviour:
   m_Name: c7d8c1eb-191d-45bb-aee9-e2419dad239e
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 1
-  text: AHHHHHH
+  text: Fine day we're having.
   children:
-  - 0c7b1019-7d28-4336-b767-3dba5ec11c9a
+  - 282ed0a9-44f8-4efc-a0ee-e72a2be0b386
   rect:
     serializedVersion: 2
     x: 288
@@ -79,9 +104,9 @@ MonoBehaviour:
   condition:
     and:
     - or:
-      - predicate: PlayerSanityEqualTo
+      - predicate: 3
         parameters:
-        - 80
+        - 100
         negate: 0
 --- !u!114 &11400000
 MonoBehaviour:
@@ -100,6 +125,7 @@ MonoBehaviour:
   - {fileID: 2680760569710573555}
   - {fileID: -5066964758865394194}
   - {fileID: -8272265588355069617}
+  - {fileID: -5900700649690916184}
 --- !u!114 &2680760569710573555
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -113,7 +139,7 @@ MonoBehaviour:
   m_Name: 056cf87d-84c1-45e2-b22d-f278607f2e41
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 1
-  text: Hi...
+  text: AHHHH
   children:
   - 0c7b1019-7d28-4336-b767-3dba5ec11c9a
   rect:
@@ -123,6 +149,6 @@ MonoBehaviour:
     width: 200
     height: 100
   onEnterActions: 
-  onExitActions: 
+  onExitActions: 02000000
   condition:
     and: []

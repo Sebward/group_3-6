@@ -24,7 +24,6 @@ public class SanitySystem : MonoBehaviour, IPredicateEvaluator
         // Trigger the sanity changed event.
         OnSanityChanged?.Invoke(currentSanity);
         CheckSanityLevelEvents();
-        Debug.Log(currentSanity);
     }
 
     // return current sanity level || might be redundant
@@ -48,19 +47,19 @@ public class SanitySystem : MonoBehaviour, IPredicateEvaluator
     }
 
     // Evaluator for dialogue system condition.
-    public bool? Evaluate(string predicate, string[] parameters)
+    public bool? Evaluate(eCondition predicate, string[] parameters)
     {
-        if (predicate == "PlayerSanityGreaterThan")
+        if (predicate == eCondition.PlayerSanityGreaterThan)
         {
             return currentSanity > int.Parse(parameters[0]);
         }
 
-        if (predicate == "PlayerSanityLessThan")
+        if (predicate == eCondition.PlayerSanityLessThan)
         {
             return currentSanity < int.Parse(parameters[0]);
         }
 
-        if (predicate == "PlayerSanityEqualTo")
+        if (predicate == eCondition.PlayerSanityEqualTo)
         {
             return currentSanity == int.Parse(parameters[0]);
         }
