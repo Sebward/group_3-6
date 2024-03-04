@@ -12,6 +12,12 @@ namespace Game.Dialogue
         CursorState cursorState;
         Player player;
 
+
+/*        //Data Points
+        [SerializeField] 
+        public string characterName;*/
+
+
         void Awake()
         {
             playerConversant = GameObject.FindObjectOfType<PlayerConversant>();
