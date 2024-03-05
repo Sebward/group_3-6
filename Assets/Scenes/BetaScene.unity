@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.37311915, g: 0.3807396, b: 0.35872662, a: 1}
+  m_IndirectSpecularColor: {r: 0.37311953, g: 0.38074014, b: 0.3587274, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -201,8 +201,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 360c89eb03d349e4dadfcef17bb622a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue: {fileID: 11400000, guid: 562a7908756bc0848830404f9d25d836, type: 2}
-  conversantName: Jill
+  dialogue: {fileID: 11400000, guid: a9f3c2764d8dbe946a4187b449880eec, type: 2}
+  conversantName: Jennie
 --- !u!114 &4782932
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -611,7 +611,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 360c89eb03d349e4dadfcef17bb622a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue: {fileID: 11400000, guid: 6c4b860db17e52e4fb3cd74098ac41ca, type: 2}
+  dialogue: {fileID: 11400000, guid: f981d96c274df914eb031772f27e1ef0, type: 2}
   conversantName: Lucy
 --- !u!114 &89007451
 MonoBehaviour:
@@ -2562,8 +2562,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 360c89eb03d349e4dadfcef17bb622a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue: {fileID: 11400000, guid: 562a7908756bc0848830404f9d25d836, type: 2}
-  conversantName: Jill
+  dialogue: {fileID: 11400000, guid: 5c8adb2ac6b28d84398bb2741ed71ed6, type: 2}
+  conversantName: Jennie
 --- !u!114 &420575443
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2935,7 +2935,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 360c89eb03d349e4dadfcef17bb622a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue: {fileID: 11400000, guid: 08197efc56e342c4b85c64bc2c6e1258, type: 2}
+  dialogue: {fileID: 11400000, guid: 9cf1977cd4b8d604dbf4476bd8c6d85b, type: 2}
   conversantName: Dr Culver
 --- !u!114 &561431051
 MonoBehaviour:
@@ -3299,8 +3299,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 360c89eb03d349e4dadfcef17bb622a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue: {fileID: 11400000, guid: 562a7908756bc0848830404f9d25d836, type: 2}
-  conversantName: Jill
+  dialogue: {fileID: 11400000, guid: abd2f28d426914945b358fac01956e66, type: 2}
+  conversantName: Jennie
 --- !u!114 &610296998
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4156,7 +4156,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 360c89eb03d349e4dadfcef17bb622a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue: {fileID: 11400000, guid: 08197efc56e342c4b85c64bc2c6e1258, type: 2}
+  dialogue: {fileID: 11400000, guid: 8c82420bcbc69244dbfc4a34e207bdf6, type: 2}
   conversantName: Dr Culver
 --- !u!114 &701415638
 MonoBehaviour:
@@ -4898,8 +4898,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 360c89eb03d349e4dadfcef17bb622a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue: {fileID: 11400000, guid: 6c4b860db17e52e4fb3cd74098ac41ca, type: 2}
-  conversantName: Lucy
+  dialogue: {fileID: 11400000, guid: 22da84cb9847bc3419d974a6e837b70d, type: 2}
+  conversantName: Mary
 --- !u!114 &879138932
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5246,7 +5246,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 360c89eb03d349e4dadfcef17bb622a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue: {fileID: 11400000, guid: 08197efc56e342c4b85c64bc2c6e1258, type: 2}
+  dialogue: {fileID: 11400000, guid: 1f6a989f168e03d45bd29d5e7ad7b9ce, type: 2}
   conversantName: Dr Culver
 --- !u!114 &1003603865
 MonoBehaviour:
@@ -5530,7 +5530,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 360c89eb03d349e4dadfcef17bb622a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue: {fileID: 11400000, guid: 6c4b860db17e52e4fb3cd74098ac41ca, type: 2}
+  dialogue: {fileID: 11400000, guid: 4be7e8b52dc817a428c224ea0cca3459, type: 2}
   conversantName: Lucy
 --- !u!114 &1005614220
 MonoBehaviour:
@@ -5975,7 +5975,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 360c89eb03d349e4dadfcef17bb622a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue: {fileID: 11400000, guid: 08197efc56e342c4b85c64bc2c6e1258, type: 2}
+  dialogue: {fileID: 11400000, guid: b0e6297b9349dc945bace60fc3c6314c, type: 2}
   conversantName: Dr Culver
 --- !u!114 &1091311173
 MonoBehaviour:
@@ -6162,8 +6162,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 360c89eb03d349e4dadfcef17bb622a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue: {fileID: 11400000, guid: 562a7908756bc0848830404f9d25d836, type: 2}
-  conversantName: Jill
+  dialogue: {fileID: 11400000, guid: ced8234c050a3794c9552913be9eaba7, type: 2}
+  conversantName: Jennie
 --- !u!114 &1130414972
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7397,7 +7397,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 360c89eb03d349e4dadfcef17bb622a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue: {fileID: 11400000, guid: 08197efc56e342c4b85c64bc2c6e1258, type: 2}
+  dialogue: {fileID: 11400000, guid: 74d4108002a9c8446972958e771afbf7, type: 2}
   conversantName: Dr Culver
 --- !u!114 &1447440669
 MonoBehaviour:
@@ -7772,8 +7772,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 360c89eb03d349e4dadfcef17bb622a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue: {fileID: 11400000, guid: 6c4b860db17e52e4fb3cd74098ac41ca, type: 2}
-  conversantName: Lucy
+  dialogue: {fileID: 11400000, guid: 45870bf835a8a55429f9af6c0236ff39, type: 2}
+  conversantName: Mary
 --- !u!114 &1495874311
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7954,8 +7954,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 360c89eb03d349e4dadfcef17bb622a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue: {fileID: 11400000, guid: 6c4b860db17e52e4fb3cd74098ac41ca, type: 2}
-  conversantName: Lucy
+  dialogue: {fileID: 11400000, guid: 63039b9de61d9944aac9e7ee941d161c, type: 2}
+  conversantName: Mary
 --- !u!114 &1602952790
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9180,8 +9180,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 360c89eb03d349e4dadfcef17bb622a5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue: {fileID: 11400000, guid: 562a7908756bc0848830404f9d25d836, type: 2}
-  conversantName: Jill
+  dialogue: {fileID: 11400000, guid: 608239c9fc79a6343bf62c1796e821ff, type: 2}
+  conversantName: Jennie
 --- !u!114 &1988935777
 MonoBehaviour:
   m_ObjectHideFlags: 0
