@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Door
   - OnboardingDoor
+  - Character
   layers:
   - Default
   - TransparentFX

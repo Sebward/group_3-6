@@ -12,10 +12,14 @@ namespace Game.Dialogue
         CursorState cursorState;
         Player player;
 
+        [SerializeField] private int rayLength = 5;
+        [SerializeField] private LayerMask layerMaskInteract;
+        [SerializeField] private string excludeLayerName = null;
 
-/*        //Data Points
-        [SerializeField] 
-        public string characterName;*/
+
+        /*        //Data Points
+                [SerializeField] 
+                public string characterName;*/
 
 
         void Awake()
@@ -29,19 +33,31 @@ namespace Game.Dialogue
 
         private void OnMouseOver()
         {
-            // Show interaction text if dialogue isn't active
-            if (playerConversant.GetCurrentDialogue() == null)
-            {
-                cursorState.SetCursorState(CursorType.DialogueInteract);
-                gameUI.SetScreenActive("Interact Popup", true);
-            }
+            // Check if conversant still exists
+            if (aIConversant == null) return;
 
-            //Input
-            if (Input.GetKeyDown(KeyCode.E))
+
+            if(Vector3.Distance(transform.position, player.transform.position) < 5)
             {
-                aIConversant.StartDialogue();
+                // Show interaction text if dialogue isn't active
+                if (playerConversant.GetCurrentDialogue() == null)
+                {
+                    cursorState.SetCursorState(CursorType.DialogueInteract);
+                    gameUI.SetScreenActive("Interact Popup", true);
+                }
+
+                //Input
+                if (Input.GetKeyDown(KeyCode.E))
+                {
+                    aIConversant.StartDialogue();
+                    cursorState.SetCursorState(CursorType.Default);
+                    gameUI.SetScreenActive("Interact Popup", false);
+                }
+            }
+            else
+            {
                 cursorState.SetCursorState(CursorType.Default);
-                gameUI.SetScreenActive("Interact Popup", false);
+                gameUI.SetScreenActive("Interact Popup", false);             
             }
         }
 

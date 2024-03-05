@@ -20,6 +20,7 @@ public class Player : MonoBehaviour
     public bool InConversation = false;
     public float xOffset;
     public float zOffset = 0;
+    public float roomOffset;
     public int HallwayNumber = 0;
 
     // Cursor
@@ -93,15 +94,6 @@ public class Player : MonoBehaviour
         }
     }
 
-/*    private void OnCollisionEnter(Collision collision)
-    {
-        if(collision.gameObject.tag == "Door")
-        {
-            Debug.Log("Player collided with door");
-            gameObject.transform.position = new Vector3(0, 0, zOffset * HallwayNumber);
-        }
-    }*/
-
     public void SanityCheck()
     {
         if (playerSanitySystem.currentSanity <= 0)
@@ -110,7 +102,7 @@ public class Player : MonoBehaviour
             cursorState.SetCursorLock(false);
             GameObject.Find("Game UI").transform.Find("End Screen").gameObject.SetActive(true);
         }
-        else if(playerSanitySystem.currentSanity <= 25)
+/*        else if(playerSanitySystem.currentSanity <= 25)
         {
             //Fade in triggers and call the function to change the hallway
             if (HallwayNumber == 2)
@@ -133,11 +125,10 @@ public class Player : MonoBehaviour
             //Fade out triggers and call the function to change the hallway
             if (HallwayNumber == 0)
             {
-                Debug.Log("Sanity is 75");
                 HallwayNumber = 1;
                 StartCoroutine(Fade());
             }
-        }
+        }*/
     }
 
     void ChangeHallway()
@@ -147,7 +138,9 @@ public class Player : MonoBehaviour
 
     public void ResetHallway()
     {
-        gameObject.transform.position = new Vector3(0, 2, zOffset * HallwayNumber);
+        HallwayNumber++;
+/*        Debug.Log(HallwayNumber);*/
+        gameObject.transform.position = new Vector3(xOffset, 2, zOffset * HallwayNumber - roomOffset);
     }
 
     public void Intro()

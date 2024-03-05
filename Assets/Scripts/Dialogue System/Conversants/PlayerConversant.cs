@@ -49,6 +49,7 @@ namespace Game.Dialogue
         public void Quit()
         {
             cursorState.SetCursorLock(true);
+            Destroy(currentConversant);
             currentDialogue = null;
             TriggerExitActions();
             currentNode = null;

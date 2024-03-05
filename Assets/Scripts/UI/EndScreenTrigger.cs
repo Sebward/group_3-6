@@ -12,7 +12,7 @@ public class EndScreenTrigger : MonoBehaviour
     Player player;
     DayTracker dayTracker;
     CursorState cursorState;
-    private int dayMax;
+    public int dayMax = 5;
 
     private FadeInOut fadeInOut;
 
@@ -21,8 +21,6 @@ public class EndScreenTrigger : MonoBehaviour
         player = GameObject.Find("Player").GetComponent<Player>() as Player;
         dayTracker = GameObject.Find("DayTracker").GetComponent<DayTracker>() as DayTracker;
         fadeInOut = FindObjectOfType<FadeInOut>();
-
-        dayMax = 3;
     }
 
     void Start()
