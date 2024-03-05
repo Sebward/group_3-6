@@ -99,6 +99,7 @@ public class Player : MonoBehaviour
         if (playerSanitySystem.currentSanity <= 0)
         {
             //Game over Pop up
+            cursorState.SetCursorLock(false);
             GameObject.Find("Game UI").transform.Find("End Screen").gameObject.SetActive(true);
         }
         else if(playerSanitySystem.currentSanity <= 25)
