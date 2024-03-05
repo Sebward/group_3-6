@@ -29,6 +29,9 @@ namespace Game.Dialogue
 
         private void OnMouseOver()
         {
+            // Check if conversant still exists
+            if (aIConversant == null) return;
+
             // Show interaction text if dialogue isn't active
             if (playerConversant.GetCurrentDialogue() == null)
             {
