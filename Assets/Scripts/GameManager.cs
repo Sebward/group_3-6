@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Game.Dialogue;
 
 public class GameManager : MonoBehaviour
 {
     private static GameManager instance;
     private GameUI gameUI;
     private CursorState cursorState;
+    private PlayerConversant playerConversant;
     private bool isPaused = false;
     
     void Start()
@@ -28,6 +30,7 @@ public class GameManager : MonoBehaviour
         // Set up GameUI reference.
         gameUI = GameObject.FindObjectOfType<GameUI>();
         cursorState = GameObject.FindObjectOfType<CursorState>();
+        playerConversant = GameObject.FindObjectOfType<PlayerConversant>();
     }
 
     void Update()
@@ -45,7 +48,15 @@ public class GameManager : MonoBehaviour
         isPaused =!isPaused;
         gameUI.SetScreenActive("Pause Screen", isPaused);
         if (!isPaused) gameUI.SetAllMenusActive(false);
-        cursorState.SetCursorLock(!isPaused);
+
+        if (playerConversant != null && playerConversant.GetCurrentDialogue() != null)
+        {
+            cursorState.SetCursorLock(false);
+        }
+        else
+        {
+            cursorState.SetCursorLock(!isPaused);
+        }
     }
 
     public void Restart()
