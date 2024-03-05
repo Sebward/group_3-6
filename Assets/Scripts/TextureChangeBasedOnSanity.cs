@@ -21,26 +21,28 @@ public class TextureChangeBasedOnSanity : MonoBehaviour
     private void UpdateMeshMaterials(float currentSanity)
     {
         Material selectedMaterial;
-
         // Determine which material to use based on the current sanity level
         float sanityPercentage = currentSanity / playerSanitySystem.maxSanity;
-        if (sanityPercentage <= 0.33f)
-        {
-            selectedMaterial = lowSanityMaterial;
-        }
-        else if (sanityPercentage <= 0.66f)
-        {
-            selectedMaterial = mediumSanityMaterial;
-        }
-        else // Sanity is between 67% to 100%
+        selectedMaterial = highSanityMaterial;
+        if (sanityPercentage > 0.66f)
         {
             selectedMaterial = highSanityMaterial;
         }
-
-        // Apply the selected material to all specified meshes
-        foreach (var mesh in meshesToChange)
+        else
         {
-            mesh.material = selectedMaterial;
+            if (sanityPercentage <= 0.33f)
+            {
+                selectedMaterial = lowSanityMaterial;
+            }
+            else if (sanityPercentage <= 0.66f)
+            {
+                selectedMaterial = mediumSanityMaterial;
+            }
+            // Apply the selected material to all specified meshes
+            foreach (var mesh in meshesToChange)
+            {
+                mesh.material = selectedMaterial;
+            }
         }
     }
 
