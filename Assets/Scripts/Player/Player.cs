@@ -17,6 +17,7 @@ public class Player : MonoBehaviour
     [SerializeField] Transform cameraTransform;
     PlayerConversant playerConversant;
     SanitySystem playerSanitySystem;
+    public bool InConversation = false;
     public float xOffset;
     public float zOffset = 0;
     public int HallwayNumber = 0;
@@ -67,6 +68,7 @@ public class Player : MonoBehaviour
     {
         if (playerConversant == null || playerConversant.GetCurrentDialogue() == null)
         {
+            InConversation = false;
             rotationX -= Input.GetAxis("Mouse Y") * mouseSensitivity;
             rotationX = Mathf.Clamp(rotationX, -90.0f, 90.0f);
 
@@ -81,7 +83,13 @@ public class Player : MonoBehaviour
             //cameraTransform.transform.localRotation = Quaternion.Euler(rotationX, 0, 0);
             Vector3 currentRotation = new Vector3(transform.localEulerAngles.x, transform.localEulerAngles.y, transform.localEulerAngles.z);
             Debug.Log(currentRotation);
-            transform.rotation = Quaternion.Euler(0, currentRotation.y, 0);
+            //transform.rotation = Quaternion.Euler(0, currentRotation.y, 0);
+
+            if(!InConversation)
+            {
+                transform.rotation = Quaternion.Euler(0, currentRotation.y, 0);
+                InConversation = true;
+            }
         }
     }
 

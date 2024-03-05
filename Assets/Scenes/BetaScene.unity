@@ -2010,6 +2010,7 @@ MonoBehaviour:
   speed: 5
   rb: {fileID: 393901163}
   cameraTransform: {fileID: 720803273}
+  InConversation: 0
   xOffset: 0
   zOffset: 30
   HallwayNumber: 0
@@ -2074,7 +2075,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!1 &395047017
 GameObject:
