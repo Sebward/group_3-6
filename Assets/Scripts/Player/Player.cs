@@ -82,7 +82,7 @@ public class Player : MonoBehaviour
         {
             //cameraTransform.transform.localRotation = Quaternion.Euler(rotationX, 0, 0);
             Vector3 currentRotation = new Vector3(transform.localEulerAngles.x, transform.localEulerAngles.y, transform.localEulerAngles.z);
-            Debug.Log(currentRotation);
+            //Debug.Log(currentRotation);
             //transform.rotation = Quaternion.Euler(0, currentRotation.y, 0);
 
             if(!InConversation)

@@ -51,12 +51,12 @@ public class SanitySystem : MonoBehaviour, IPredicateEvaluator
     {
         if (predicate == eCondition.PlayerSanityGreaterThan)
         {
-            return currentSanity > int.Parse(parameters[0]);
+            return currentSanity >= int.Parse(parameters[0]);
         }
 
         if (predicate == eCondition.PlayerSanityLessThan)
         {
-            return currentSanity < int.Parse(parameters[0]);
+            return currentSanity <= int.Parse(parameters[0]);
         }
 
         if (predicate == eCondition.PlayerSanityEqualTo)
