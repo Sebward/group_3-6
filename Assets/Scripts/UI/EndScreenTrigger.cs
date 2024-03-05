@@ -11,6 +11,7 @@ public class EndScreenTrigger : MonoBehaviour
     [SerializeField] TMP_Text dayText;
     Player player;
     DayTracker dayTracker;
+    CursorState cursorState;
     private int dayMax;
 
     private FadeInOut fadeInOut;
@@ -24,13 +25,21 @@ public class EndScreenTrigger : MonoBehaviour
         dayMax = 3;
     }
 
+    void Start()
+    {
+        cursorState = GameObject.FindObjectOfType<CursorState>();
+    }
+
     void OnTriggerEnter(Collider other)
     {
         if (other.name == "Player")
         {
             if(dayMax == dayTracker.Day)
             {
+                cursorState.SetCursorLock(false);
                 endScreen.SetActive(true);
+                Cursor.lockState = CursorLockMode.None;
+                cursorState.SetCursorState(CursorType.Default);
             }
             else
             {
