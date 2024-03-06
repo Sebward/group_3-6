@@ -7,6 +7,7 @@ public class DoorOpen : MonoBehaviour
     [SerializeField] private int rayLength = 5;
     [SerializeField] private LayerMask layerMaskInteract;
     [SerializeField] private string excludeLayerName = null;
+    private bool isOpen = false;
 
 
     private MyDoorController rayCastedObj;
@@ -38,7 +39,7 @@ public class DoorOpen : MonoBehaviour
                 rayCastedObj = hit.collider.gameObject.GetComponent<MyDoorController>();
                 if(Input.GetKeyDown(openDoorKey))
                 {
-                    rayCastedObj.PlayAnimation();
+                    OpenDoor();
                 }
             }
         }
@@ -49,6 +50,21 @@ public class DoorOpen : MonoBehaviour
                 cursorState.SetCursorState(CursorType.Default);
                 gameUI.SetScreenActive("Interact Popup", false);
             }
+        }
+    }
+
+    private void OpenDoor()
+    {
+        isOpen = !isOpen;
+        rayCastedObj.PlayAnimation();
+
+        if (isOpen)
+        {
+            SoundManager.Instance.PlaySound(0);
+        }
+        else
+        {
+            SoundManager.Instance.PlaySound(1);
         }
     }
 }
