@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: ffc47584-5b03-4c5b-be94-eca393986e20
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 1
-  text: "Oh, that\u2019s nice, I guess."
+  text: "But it\u2019s been such a short walk."
   children:
   - 27504e40-c083-47cf-8710-1ec9f82833d6
   rect:
@@ -44,7 +44,8 @@ MonoBehaviour:
   m_Name: 801cca3d-c335-4d82-af0c-b8d1b89d414f
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 0
-  text: "Um, I don\u2019t think I should be talking to you."
+  text: 'Poor girl, perhaps the wallpaper is a tad bit too stimulating for a fragile
+    creature like you. You really should be resting. '
   children: []
   rect:
     serializedVersion: 2
@@ -69,8 +70,8 @@ MonoBehaviour:
   m_Name: 52624168-59f6-41e5-9aac-7a36d58cde98
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 0
-  text: "I\u2019ll have you know that I\u2019m so pleasant that I\u2019ll be allowed
-    to leave soon!"
+  text: 'Poor girl, perhaps the wallpaper is a tad bit too stimulating for a fragile
+    creature like you. You really should be resting. '
   children: []
   rect:
     serializedVersion: 2
@@ -95,10 +96,8 @@ MonoBehaviour:
   m_Name: c75e2ef3-34ee-46e3-bd68-1e9d71596ffa
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 0
-  text: "Hello there! It\u2019s nice to finally talk to someone again, it gets\u2026
-    lonely resting in my room for so long. The doctors say I\u2019m getting better
-    though, that I\u2019ve become more agreeable and pleasant since they started
-    treatment."
+  text: "Finish up your walk, it\u2019ll be time to go back to bed soon. You must
+    be tired after all this excitement."
   children:
   - ddb203ee-be99-4124-a45d-e5cb2d9e42cf
   - ffc47584-5b03-4c5b-be94-eca393986e20
@@ -132,8 +131,7 @@ MonoBehaviour:
   m_Name: 988da0d9-149f-4b18-bb38-f9e150437445
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 0
-  text: "You poor thing, do everything the doctors say and you\u2019ll be right as
-    rain in no time."
+  text: I do. Now off to bed with you!
   children: []
   rect:
     serializedVersion: 2
@@ -158,7 +156,8 @@ MonoBehaviour:
   m_Name: 18512b30-dfd3-45d9-a4a8-987c588f9a31
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 0
-  text: "I- I suppose you\u2019re right."
+  text: 'Our research shows that any more excitement will overwhelm your delicate
+    constitution. '
   children: []
   rect:
     serializedVersion: 2
@@ -183,8 +182,7 @@ MonoBehaviour:
   m_Name: 96201695-c263-472e-b6ec-aa600ad267d3
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 0
-  text: "You poor thing! Of course, do everything the doctors say and you\u2019ll
-    be right as rain in no time."
+  text: Of course, frailty is to be expected for one with your condition.
   children: []
   rect:
     serializedVersion: 2
@@ -209,12 +207,12 @@ MonoBehaviour:
   m_Name: a8a39e46-ddc6-4194-85b3-214b584c263d
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 1
-  text: "Even out in the hallway it\u2019s lonely. "
+  text: I could do with some more excitement I think.
   children:
   - 18512b30-dfd3-45d9-a4a8-987c588f9a31
   rect:
     serializedVersion: 2
-    x: 276
+    x: 275
     y: 751
     width: 200
     height: 100
@@ -240,7 +238,7 @@ MonoBehaviour:
   m_Name: ddb203ee-be99-4124-a45d-e5cb2d9e42cf
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 1
-  text: "That\u2019s wonderful! "
+  text: I am quite tired.
   children:
   - df9017f2-6ef4-4fbe-b4f7-70c58c69fcb5
   rect:
@@ -303,7 +301,7 @@ MonoBehaviour:
   m_Name: 0cd19a5c-5439-416d-a2ee-0d34bbde4ee8
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 1
-  text: The shadows keep me company now.
+  text: "I can\u2019t go yet, I need to speak with the woman in the wallpaper. "
   children:
   - 07c4db6c-c0d2-4419-a4d0-624451270bda
   rect:
@@ -334,7 +332,7 @@ MonoBehaviour:
   m_Name: 6a0daa12-c827-4ee2-9c61-23421ca7359d
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 1
-  text: "I think I\u2019m getting worse."
+  text: If you say so.
   children:
   - 988da0d9-149f-4b18-bb38-f9e150437445
   rect:
@@ -365,7 +363,7 @@ MonoBehaviour:
   m_Name: 7bb0f466-4b22-461e-852b-57b9d0d30679
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 1
-  text: Resting did get lonely, but out here the shadows keep me company.
+  text: "I can\u2019t go yet, I need to solve the puzzle in the pattern. "
   children:
   - 801cca3d-c335-4d82-af0c-b8d1b89d414f
   rect:
@@ -401,8 +399,7 @@ MonoBehaviour:
   m_Name: 27504e40-c083-47cf-8710-1ec9f82833d6
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 0
-  text: "Erm- thanks. I\u2019m sure that with a bit more rest you\u2019ll become
-    more agreeable too."
+  text: Our research shows that any more exercise will overwhelm your delicate constitution.
   children: []
   rect:
     serializedVersion: 2
@@ -427,7 +424,7 @@ MonoBehaviour:
   m_Name: c156e45f-12bd-490e-8a0f-2bff1762844f
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 1
-  text: "Even out in the hallway it\u2019s lonely."
+  text: What excitement?
   children:
   - e573d940-9195-4350-ab16-fa485aea3a69
   rect:
@@ -463,7 +460,7 @@ MonoBehaviour:
   m_Name: ccd49bc7-1c2d-429b-bcfb-99ade4234612
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 1
-  text: "Are you sure that \u2018pleasant\u2019 is the word for it?"
+  text: "I can\u2019t go yet, I need to follow the pattern. "
   children:
   - 52624168-59f6-41e5-9aac-7a36d58cde98
   rect:
@@ -494,7 +491,8 @@ MonoBehaviour:
   m_Name: e573d940-9195-4350-ab16-fa485aea3a69
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 0
-  text: "I- I suppose you\u2019re right."
+  text: 'Our research shows that conversation, the wallpaper, and exercise are the
+    optimal level of excitement for your delicate constitution. '
   children: []
   rect:
     serializedVersion: 2
@@ -519,7 +517,8 @@ MonoBehaviour:
   m_Name: 07c4db6c-c0d2-4419-a4d0-624451270bda
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 0
-  text: "Um, I don\u2019t think I should be talking to you."
+  text: The what! Poor girl, perhaps the wallpaper is too stimulating for a fragile
+    creature like you. You must go rest.
   children: []
   rect:
     serializedVersion: 2
@@ -544,7 +543,7 @@ MonoBehaviour:
   m_Name: df9017f2-6ef4-4fbe-b4f7-70c58c69fcb5
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 0
-  text: Thank you! You must be improving too.
+  text: "I\u2019m sure. Frailty is to be expected for one with your condition."
   children: []
   rect:
     serializedVersion: 2
@@ -569,7 +568,7 @@ MonoBehaviour:
   m_Name: 4231b386-0798-4c9a-aafc-4b1441412240
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 1
-  text: "Could you give me some tips? I think I\u2019m getting worse."
+  text: "I guess\u2026"
   children:
   - 96201695-c263-472e-b6ec-aa600ad267d3
   rect:
