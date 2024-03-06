@@ -6,6 +6,7 @@ public class SoundManager : MonoBehaviour
 {
     private static SoundManager instance;
     [SerializeField] float intialSFXVolume = 0.8f;
+    [SerializeField] float initialMusicVolume = 0.1f;
 
     public static SoundManager Instance
     {
@@ -41,21 +42,30 @@ public class SoundManager : MonoBehaviour
             DontDestroyOnLoad(this.gameObject);
         }
 
-        // Initalize audio source
-        audioSource = gameObject.AddComponent<AudioSource>();
+        // Initalize audio sources
+        soundSource = gameObject.AddComponent<AudioSource>();
+        musicSource = gameObject.AddComponent<AudioSource>();
 
-        // Set inital volume
-        audioSource.volume = intialSFXVolume;
+        // Set inital volumes
+        soundSource.volume = intialSFXVolume;
+        musicSource.volume = initialMusicVolume;
+
+        // Start with music
+        PlayMusic(0);
     }
 
     [SerializeField] AudioClip[] soundClips;
-    private AudioSource audioSource;
+    private AudioSource soundSource;
+
+    [SerializeField] AudioClip[] musicClips;
+    private AudioSource musicSource;
 
     public void PlaySound(int soundIndex)
     {
+        // Play sound if in range
         if (soundIndex >= 0 && soundIndex < soundClips.Length)
         {
-            audioSource.PlayOneShot(soundClips[soundIndex]);
+            soundSource.PlayOneShot(soundClips[soundIndex]);
         }
         else
         {
@@ -63,13 +73,43 @@ public class SoundManager : MonoBehaviour
         }
     }
 
-    public void SetVolume(float volume)
+    public void PlayMusic(int musicIndex)
     {
-        audioSource.volume = volume;
+        // Start music if in range
+        if (musicIndex >= 0 && musicIndex < musicClips.Length)
+        {
+            musicSource.clip = musicClips[musicIndex];
+            musicSource.loop = true;
+            musicSource.Play();
+        }
+        else
+        {
+            Debug.LogWarning("Invalid music index: " + musicIndex);
+        }
     }
 
-    public float GetVolume()
+    public void StopMusic()
     {
-        return audioSource.volume;
+        musicSource.Stop();
+    }
+
+    public void SetSFXVolume(float volume)
+    {
+        soundSource.volume = volume;
+    }
+
+    public float GetSFXVolume()
+    {
+        return soundSource.volume;
+    }
+
+    public void SetMusicVolume(float volume)
+    {
+        musicSource.volume = volume;
+    }
+
+    public float GetMusicVolume()
+    {
+        return musicSource.volume;
     }
 }

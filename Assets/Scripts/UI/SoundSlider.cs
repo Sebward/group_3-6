@@ -17,7 +17,7 @@ public class SoundSlider : MonoBehaviour
         }
 
         // Set inital slider position depending on starting volume
-        slider.value = SoundManager.Instance.GetVolume();
+        slider.value = SoundManager.Instance.GetSFXVolume();
 
         // Add listener to slider
         slider.onValueChanged.AddListener(ChangeSFXVolume);
@@ -26,6 +26,6 @@ public class SoundSlider : MonoBehaviour
     // Calls SoundManager to set volume
     private void ChangeSFXVolume(float volume)
     {
-        SoundManager.Instance.SetVolume(volume);
+        SoundManager.Instance.SetSFXVolume(volume);
     }
 }
