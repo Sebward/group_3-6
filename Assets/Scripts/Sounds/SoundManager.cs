@@ -5,6 +5,7 @@ using UnityEngine;
 public class SoundManager : MonoBehaviour
 {
     private static SoundManager instance;
+    [SerializeField] float intialSFXVolume = 0.8f;
 
     public static SoundManager Instance
     {
@@ -42,6 +43,9 @@ public class SoundManager : MonoBehaviour
 
         // Initalize audio source
         audioSource = gameObject.AddComponent<AudioSource>();
+
+        // Set inital volume
+        audioSource.volume = intialSFXVolume;
     }
 
     [SerializeField] AudioClip[] soundClips;
@@ -57,5 +61,15 @@ public class SoundManager : MonoBehaviour
         {
             Debug.LogWarning("Invalid sound index: " + soundIndex);
         }
+    }
+
+    public void SetVolume(float volume)
+    {
+        audioSource.volume = volume;
+    }
+
+    public float GetVolume()
+    {
+        return audioSource.volume;
     }
 }
