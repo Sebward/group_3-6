@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-9047884859059399151
+--- !u!114 &-8731630688145016909
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10,78 +10,32 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe3a9293e80eddc41a48c80d620d2557, type: 3}
-  m_Name: ffc47584-5b03-4c5b-be94-eca393986e20
+  m_Name: 2cd5745c-e676-49a4-b949-c9dde14d00e4
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 1
-  text: "Oh, that\u2019s nice, I guess."
+  text: Very clever! That will keep John from interrupting our creeping
   children:
-  - 27504e40-c083-47cf-8710-1ec9f82833d6
+  - 607ebdc1-a192-492d-8029-770117be0230
   rect:
     serializedVersion: 2
-    x: 274
-    y: 164
+    x: 279
+    y: 275
     width: 200
     height: 100
   onEnterActions: 
-  onExitActions: 04000000
+  onExitActions: 0200000005000000
   condition:
     and:
     - or:
       - predicate: 1
         parameters:
-        - 60
+        - 30
         negate: 0
---- !u!114 &-8884154730770396334
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe3a9293e80eddc41a48c80d620d2557, type: 3}
-  m_Name: 801cca3d-c335-4d82-af0c-b8d1b89d414f
-  m_EditorClassIdentifier: 
-  isPlayerSpeaking: 0
-  text: "Um, I don\u2019t think I should be talking to you."
-  children: []
-  rect:
-    serializedVersion: 2
-    x: 474
-    y: 562
-    width: 200
-    height: 100
-  onEnterActions: 
-  onExitActions: 
-  condition:
-    and: []
---- !u!114 &-8784465065986165668
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe3a9293e80eddc41a48c80d620d2557, type: 3}
-  m_Name: 52624168-59f6-41e5-9aac-7a36d58cde98
-  m_EditorClassIdentifier: 
-  isPlayerSpeaking: 0
-  text: "I\u2019ll have you know that I\u2019m so pleasant that I\u2019ll be allowed
-    to leave soon!"
-  children: []
-  rect:
-    serializedVersion: 2
-    x: 475
-    y: 265
-    width: 200
-    height: 100
-  onEnterActions: 
-  onExitActions: 
-  condition:
-    and: []
+    - or:
+      - predicate: 2
+        parameters:
+        - 59
+        negate: 0
 --- !u!114 &-8495010046473545104
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -95,31 +49,28 @@ MonoBehaviour:
   m_Name: c75e2ef3-34ee-46e3-bd68-1e9d71596ffa
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 0
-  text: "Hello there! It\u2019s nice to finally talk to someone again, it gets\u2026
-    lonely resting in my room for so long. The doctors say I\u2019m getting better
-    though, that I\u2019ve become more agreeable and pleasant since they started
-    treatment."
+  text: Tore it all down and threw away the key!
   children:
-  - ddb203ee-be99-4124-a45d-e5cb2d9e42cf
-  - ffc47584-5b03-4c5b-be94-eca393986e20
-  - ccd49bc7-1c2d-429b-bcfb-99ade4234612
-  - 4231b386-0798-4c9a-aafc-4b1441412240
-  - c156e45f-12bd-490e-8a0f-2bff1762844f
-  - 7bb0f466-4b22-461e-852b-57b9d0d30679
-  - 6a0daa12-c827-4ee2-9c61-23421ca7359d
-  - a8a39e46-ddc6-4194-85b3-214b584c263d
-  - 0cd19a5c-5439-416d-a2ee-0d34bbde4ee8
+  - 063f5343-4159-4b92-bd6f-f11b9ef7c600
+  - 10cf5ffa-73d4-4a0b-a930-c2e7117e7444
+  - 4de59ed0-ff01-441f-8d4e-2a176a7849f6
+  - 2cd5745c-e676-49a4-b949-c9dde14d00e4
+  - a277a5a4-6bb7-4a10-8c14-b5075ce5ed04
+  - 10859d44-8809-49e9-91b8-3a862f43937e
+  - 530e3c81-54c9-4045-9998-e044e713a5eb
+  - a26dd3e6-f1a1-4dc7-8e2a-78e231fb0010
+  - 9c546add-3cff-4695-8608-2c74e7f4d5ea
   rect:
     serializedVersion: 2
-    x: 7.9999924
-    y: 463
+    x: 10.999992
+    y: 345
     width: 200
     height: 100
   onEnterActions: 
   onExitActions: 
   condition:
     and: []
---- !u!114 &-8416275324951005816
+--- !u!114 &-6848576582586389242
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -129,74 +80,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe3a9293e80eddc41a48c80d620d2557, type: 3}
-  m_Name: 988da0d9-149f-4b18-bb38-f9e150437445
+  m_Name: 607ebdc1-a192-492d-8029-770117be0230
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 0
-  text: "You poor thing, do everything the doctors say and you\u2019ll be right as
-    rain in no time."
-  children: []
-  rect:
-    serializedVersion: 2
-    x: 476
-    y: 654
-    width: 200
-    height: 100
-  onEnterActions: 
-  onExitActions: 
-  condition:
-    and: []
---- !u!114 &-6852369888289440024
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe3a9293e80eddc41a48c80d620d2557, type: 3}
-  m_Name: 18512b30-dfd3-45d9-a4a8-987c588f9a31
-  m_EditorClassIdentifier: 
-  isPlayerSpeaking: 0
-  text: "I- I suppose you\u2019re right."
-  children: []
-  rect:
-    serializedVersion: 2
-    x: 476
-    y: 751
-    width: 200
-    height: 100
-  onEnterActions: 
-  onExitActions: 
-  condition:
-    and: []
---- !u!114 &-5657916765653353272
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe3a9293e80eddc41a48c80d620d2557, type: 3}
-  m_Name: 96201695-c263-472e-b6ec-aa600ad267d3
-  m_EditorClassIdentifier: 
-  isPlayerSpeaking: 0
-  text: "You poor thing! Of course, do everything the doctors say and you\u2019ll
-    be right as rain in no time."
+  text: Yes, threw the key very far. John will have to break down the doo
   children: []
   rect:
     serializedVersion: 2
     x: 479
-    y: 363
+    y: 275
     width: 200
     height: 100
   onEnterActions: 
   onExitActions: 
   condition:
     and: []
---- !u!114 &-5060498039322971667
+--- !u!114 &-6766607949213414365
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -206,47 +105,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe3a9293e80eddc41a48c80d620d2557, type: 3}
-  m_Name: a8a39e46-ddc6-4194-85b3-214b584c263d
+  m_Name: 10859d44-8809-49e9-91b8-3a862f43937e
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 1
-  text: "Even out in the hallway it\u2019s lonely. "
+  text: "Oh she\u2019s free, that\u2019s good- no! I shouldn\u2019t be talking to
+    you."
   children:
-  - 18512b30-dfd3-45d9-a4a8-987c588f9a31
+  - 1c8b1cb1-6982-4c28-b0c1-2b55a703e896
   rect:
     serializedVersion: 2
-    x: 276
-    y: 751
-    width: 200
-    height: 100
-  onEnterActions: 
-  onExitActions: 04000000
-  condition:
-    and:
-    - or:
-      - predicate: 2
-        parameters:
-        - 29
-        negate: 0
---- !u!114 &-1806335763242257701
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe3a9293e80eddc41a48c80d620d2557, type: 3}
-  m_Name: ddb203ee-be99-4124-a45d-e5cb2d9e42cf
-  m_EditorClassIdentifier: 
-  isPlayerSpeaking: 1
-  text: "That\u2019s wonderful! "
-  children:
-  - df9017f2-6ef4-4fbe-b4f7-70c58c69fcb5
-  rect:
-    serializedVersion: 2
-    x: 273
-    y: 61
+    x: 282
+    y: 459
     width: 200
     height: 100
   onEnterActions: 
@@ -256,8 +125,157 @@ MonoBehaviour:
     - or:
       - predicate: 1
         parameters:
+        - 30
+        negate: 0
+    - or:
+      - predicate: 2
+        parameters:
+        - 59
+        negate: 0
+--- !u!114 &-3665921189786944674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe3a9293e80eddc41a48c80d620d2557, type: 3}
+  m_Name: 063f5343-4159-4b92-bd6f-f11b9ef7c600
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: Very clever! That will keep the doctors from interrupting our creeping.
+  children:
+  - cba2a07c-9061-473d-9c3f-3c412bf83beb
+  rect:
+    serializedVersion: 2
+    x: 281
+    y: 3.0000114
+    width: 200
+    height: 100
+  onEnterActions: 
+  onExitActions: 0200000005000000
+  condition:
+    and:
+    - or:
+      - predicate: 1
+        parameters:
         - 60
         negate: 0
+--- !u!114 &-3429652606736787111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe3a9293e80eddc41a48c80d620d2557, type: 3}
+  m_Name: f0053758-1d44-45ef-b466-981aefa20b48
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Yes, go, you are free now.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 478
+    y: 183.00002
+    width: 200
+    height: 100
+  onEnterActions: 
+  onExitActions: 
+  condition:
+    and: []
+--- !u!114 &-2614989814775516090
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe3a9293e80eddc41a48c80d620d2557, type: 3}
+  m_Name: a3511878-2d4c-483e-bb78-f72d586d1684
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Yes, threw the key very far. John will have to break down the door to put
+    us back!
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 483
+    y: 549
+    width: 200
+    height: 100
+  onEnterActions: 
+  onExitActions: 
+  condition:
+    and: []
+--- !u!114 &-125673030562830410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe3a9293e80eddc41a48c80d620d2557, type: 3}
+  m_Name: a277a5a4-6bb7-4a10-8c14-b5075ce5ed04
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: Oh good, you let her out.
+  children:
+  - b0a8af15-c43b-4b21-903e-a36cd28f612d
+  rect:
+    serializedVersion: 2
+    x: 280
+    y: 368
+    width: 200
+    height: 100
+  onEnterActions: 
+  onExitActions: 04000000
+  condition:
+    and:
+    - or:
+      - predicate: 1
+        parameters:
+        - 30
+        negate: 0
+    - or:
+      - predicate: 2
+        parameters:
+        - 59
+        negate: 0
+--- !u!114 &-37677958122523654
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe3a9293e80eddc41a48c80d620d2557, type: 3}
+  m_Name: 09adfe70-2123-4420-a517-6dfd40062033
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: The key to my room, out the little window. It will take them a while to find
+    it.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 479
+    y: 92.000015
+    width: 200
+    height: 100
+  onEnterActions: 
+  onExitActions: 
+  condition:
+    and: []
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -272,25 +290,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodes:
   - {fileID: -8495010046473545104}
-  - {fileID: -1806335763242257701}
-  - {fileID: -9047884859059399151}
-  - {fileID: 6845076143835842797}
-  - {fileID: 8814737206639813541}
-  - {fileID: 3144862311157919122}
-  - {fileID: -8784465065986165668}
-  - {fileID: 8861564625879172416}
-  - {fileID: -5657916765653353272}
-  - {fileID: 3553664029531131276}
-  - {fileID: 6993382809881160646}
-  - {fileID: 2793918263568828155}
-  - {fileID: -8884154730770396334}
-  - {fileID: 2771408989187281284}
-  - {fileID: -5060498039322971667}
-  - {fileID: 1849311782848968344}
-  - {fileID: -8416275324951005816}
-  - {fileID: -6852369888289440024}
-  - {fileID: 7851775445795845874}
---- !u!114 &1849311782848968344
+  - {fileID: -3665921189786944674}
+  - {fileID: 4828266311080783111}
+  - {fileID: 8685292814970977456}
+  - {fileID: 8455525088344047992}
+  - {fileID: -37677958122523654}
+  - {fileID: -3429652606736787111}
+  - {fileID: -8731630688145016909}
+  - {fileID: -125673030562830410}
+  - {fileID: -6766607949213414365}
+  - {fileID: -6848576582586389242}
+  - {fileID: 1529353899332208971}
+  - {fileID: 9090856968044104204}
+  - {fileID: 478585330895175002}
+  - {fileID: 7929032031909560971}
+  - {fileID: 52123269060692938}
+  - {fileID: -2614989814775516090}
+  - {fileID: 4380018531392587323}
+  - {fileID: 6534671215783344163}
+--- !u!114 &52123269060692938
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -300,47 +318,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe3a9293e80eddc41a48c80d620d2557, type: 3}
-  m_Name: 0cd19a5c-5439-416d-a2ee-0d34bbde4ee8
+  m_Name: 9c546add-3cff-4695-8608-2c74e7f4d5ea
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 1
-  text: The shadows keep me company now.
+  text: "But what will she do now that she\u2019s free? What about her husband? Her
+    family?"
   children:
-  - 07c4db6c-c0d2-4419-a4d0-624451270bda
+  - 02f751f1-0596-4606-8cf1-5a96aaa66a76
   rect:
     serializedVersion: 2
-    x: 278
-    y: 852
-    width: 200
-    height: 100
-  onEnterActions: 
-  onExitActions: 0200000005000000
-  condition:
-    and:
-    - or:
-      - predicate: 2
-        parameters:
-        - 29
-        negate: 0
---- !u!114 &2771408989187281284
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe3a9293e80eddc41a48c80d620d2557, type: 3}
-  m_Name: 6a0daa12-c827-4ee2-9c61-23421ca7359d
-  m_EditorClassIdentifier: 
-  isPlayerSpeaking: 1
-  text: "I think I\u2019m getting worse."
-  children:
-  - 988da0d9-149f-4b18-bb38-f9e150437445
-  rect:
-    serializedVersion: 2
-    x: 276
-    y: 654
+    x: 286
+    y: 737
     width: 200
     height: 100
   onEnterActions: 
@@ -352,7 +340,7 @@ MonoBehaviour:
         parameters:
         - 29
         negate: 0
---- !u!114 &2793918263568828155
+--- !u!114 &478585330895175002
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -362,16 +350,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe3a9293e80eddc41a48c80d620d2557, type: 3}
-  m_Name: 7bb0f466-4b22-461e-852b-57b9d0d30679
+  m_Name: 530e3c81-54c9-4045-9998-e044e713a5eb
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 1
-  text: Resting did get lonely, but out here the shadows keep me company.
+  text: "Very clever! That will keep John from interrupting our creeping. He can\u2019t
+    ever put us back now!"
   children:
-  - 801cca3d-c335-4d82-af0c-b8d1b89d414f
+  - a3511878-2d4c-483e-bb78-f72d586d1684
   rect:
     serializedVersion: 2
-    x: 274
-    y: 562
+    x: 283
+    y: 549
     width: 200
     height: 100
   onEnterActions: 
@@ -379,16 +368,11 @@ MonoBehaviour:
   condition:
     and:
     - or:
-      - predicate: 1
-        parameters:
-        - 30
-        negate: 0
-    - or:
       - predicate: 2
         parameters:
-        - 59
+        - 29
         negate: 0
---- !u!114 &3144862311157919122
+--- !u!114 &1529353899332208971
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -398,23 +382,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe3a9293e80eddc41a48c80d620d2557, type: 3}
-  m_Name: 27504e40-c083-47cf-8710-1ec9f82833d6
+  m_Name: b0a8af15-c43b-4b21-903e-a36cd28f612d
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 0
-  text: "Erm- thanks. I\u2019m sure that with a bit more rest you\u2019ll become
-    more agreeable too."
+  text: "Yes, I let her out, us out! Now we\u2019re free!"
   children: []
   rect:
     serializedVersion: 2
-    x: 474
-    y: 164
+    x: 480
+    y: 368
     width: 200
     height: 100
   onEnterActions: 
   onExitActions: 
   condition:
     and: []
---- !u!114 &3553664029531131276
+--- !u!114 &4380018531392587323
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -424,16 +407,41 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe3a9293e80eddc41a48c80d620d2557, type: 3}
-  m_Name: c156e45f-12bd-490e-8a0f-2bff1762844f
+  m_Name: 912d837e-1387-4728-af0d-76d748705af6
   m_EditorClassIdentifier: 
-  isPlayerSpeaking: 1
-  text: "Even out in the hallway it\u2019s lonely."
-  children:
-  - e573d940-9195-4350-ab16-fa485aea3a69
+  isPlayerSpeaking: 0
+  text: "Yes, I let her out, us out! Now we\u2019re free!"
+  children: []
   rect:
     serializedVersion: 2
-    x: 275
-    y: 463
+    x: 482
+    y: 642
+    width: 200
+    height: 100
+  onEnterActions: 
+  onExitActions: 
+  condition:
+    and: []
+--- !u!114 &4828266311080783111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe3a9293e80eddc41a48c80d620d2557, type: 3}
+  m_Name: 10cf5ffa-73d4-4a0b-a930-c2e7117e7444
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: What key?
+  children:
+  - 09adfe70-2123-4420-a517-6dfd40062033
+  rect:
+    serializedVersion: 2
+    x: 279
+    y: 92.000015
     width: 200
     height: 100
   onEnterActions: 
@@ -443,14 +451,9 @@ MonoBehaviour:
     - or:
       - predicate: 1
         parameters:
-        - 30
+        - 60
         negate: 0
-    - or:
-      - predicate: 2
-        parameters:
-        - 59
-        negate: 0
---- !u!114 &6845076143835842797
+--- !u!114 &6534671215783344163
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -460,28 +463,53 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe3a9293e80eddc41a48c80d620d2557, type: 3}
-  m_Name: ccd49bc7-1c2d-429b-bcfb-99ade4234612
+  m_Name: 02f751f1-0596-4606-8cf1-5a96aaa66a76
   m_EditorClassIdentifier: 
-  isPlayerSpeaking: 1
-  text: "Are you sure that \u2018pleasant\u2019 is the word for it?"
-  children:
-  - 52624168-59f6-41e5-9aac-7a36d58cde98
+  isPlayerSpeaking: 0
+  text: Whatever she wants. She is free from all of that now.
+  children: []
   rect:
     serializedVersion: 2
-    x: 275
-    y: 266
+    x: 486
+    y: 737
     width: 200
     height: 100
   onEnterActions: 
-  onExitActions: 0200000005000000
+  onExitActions: 
+  condition:
+    and: []
+--- !u!114 &7929032031909560971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe3a9293e80eddc41a48c80d620d2557, type: 3}
+  m_Name: a26dd3e6-f1a1-4dc7-8e2a-78e231fb0010
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: "Good, she\u2019s out, we\u2019re finally out!"
+  children:
+  - 912d837e-1387-4728-af0d-76d748705af6
+  rect:
+    serializedVersion: 2
+    x: 282
+    y: 642
+    width: 200
+    height: 100
+  onEnterActions: 
+  onExitActions: 04000000
   condition:
     and:
     - or:
-      - predicate: 1
+      - predicate: 2
         parameters:
-        - 60
+        - 29
         negate: 0
---- !u!114 &6993382809881160646
+--- !u!114 &8455525088344047992
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -491,22 +519,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe3a9293e80eddc41a48c80d620d2557, type: 3}
-  m_Name: e573d940-9195-4350-ab16-fa485aea3a69
+  m_Name: cba2a07c-9061-473d-9c3f-3c412bf83beb
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 0
-  text: "I- I suppose you\u2019re right."
+  text: "Yes, threw the key very far. Now I\u2019m free!"
   children: []
   rect:
     serializedVersion: 2
-    x: 475
-    y: 463
+    x: 481
+    y: 3.0000114
     width: 200
     height: 100
   onEnterActions: 
   onExitActions: 
   condition:
     and: []
---- !u!114 &7851775445795845874
+--- !u!114 &8685292814970977456
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -516,66 +544,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe3a9293e80eddc41a48c80d620d2557, type: 3}
-  m_Name: 07c4db6c-c0d2-4419-a4d0-624451270bda
-  m_EditorClassIdentifier: 
-  isPlayerSpeaking: 0
-  text: "Um, I don\u2019t think I should be talking to you."
-  children: []
-  rect:
-    serializedVersion: 2
-    x: 478
-    y: 852
-    width: 200
-    height: 100
-  onEnterActions: 
-  onExitActions: 
-  condition:
-    and: []
---- !u!114 &8814737206639813541
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe3a9293e80eddc41a48c80d620d2557, type: 3}
-  m_Name: df9017f2-6ef4-4fbe-b4f7-70c58c69fcb5
-  m_EditorClassIdentifier: 
-  isPlayerSpeaking: 0
-  text: Thank you! You must be improving too.
-  children: []
-  rect:
-    serializedVersion: 2
-    x: 473
-    y: 61
-    width: 200
-    height: 100
-  onEnterActions: 
-  onExitActions: 
-  condition:
-    and: []
---- !u!114 &8861564625879172416
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe3a9293e80eddc41a48c80d620d2557, type: 3}
-  m_Name: 4231b386-0798-4c9a-aafc-4b1441412240
+  m_Name: 4de59ed0-ff01-441f-8d4e-2a176a7849f6
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 1
-  text: "Could you give me some tips? I think I\u2019m getting worse."
+  text: Oh, I think I should go.
   children:
-  - 96201695-c263-472e-b6ec-aa600ad267d3
+  - f0053758-1d44-45ef-b466-981aefa20b48
   rect:
     serializedVersion: 2
-    x: 279
-    y: 363
+    x: 278
+    y: 183.00002
     width: 200
     height: 100
   onEnterActions: 
@@ -585,10 +563,30 @@ MonoBehaviour:
     - or:
       - predicate: 1
         parameters:
-        - 30
+        - 60
         negate: 0
-    - or:
-      - predicate: 2
-        parameters:
-        - 59
-        negate: 0
+--- !u!114 &9090856968044104204
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe3a9293e80eddc41a48c80d620d2557, type: 3}
+  m_Name: 1c8b1cb1-6982-4c28-b0c1-2b55a703e896
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: "Yes, go, creep until your heart\u2019s content!"
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 482
+    y: 459
+    width: 200
+    height: 100
+  onEnterActions: 
+  onExitActions: 
+  condition:
+    and: []

@@ -1,87 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-9047884859059399151
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe3a9293e80eddc41a48c80d620d2557, type: 3}
-  m_Name: ffc47584-5b03-4c5b-be94-eca393986e20
-  m_EditorClassIdentifier: 
-  isPlayerSpeaking: 1
-  text: "Oh, that\u2019s nice, I guess."
-  children:
-  - 27504e40-c083-47cf-8710-1ec9f82833d6
-  rect:
-    serializedVersion: 2
-    x: 274
-    y: 164
-    width: 200
-    height: 100
-  onEnterActions: 
-  onExitActions: 04000000
-  condition:
-    and:
-    - or:
-      - predicate: 1
-        parameters:
-        - 60
-        negate: 0
---- !u!114 &-8884154730770396334
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe3a9293e80eddc41a48c80d620d2557, type: 3}
-  m_Name: 801cca3d-c335-4d82-af0c-b8d1b89d414f
-  m_EditorClassIdentifier: 
-  isPlayerSpeaking: 0
-  text: "Um, I don\u2019t think I should be talking to you."
-  children: []
-  rect:
-    serializedVersion: 2
-    x: 474
-    y: 562
-    width: 200
-    height: 100
-  onEnterActions: 
-  onExitActions: 
-  condition:
-    and: []
---- !u!114 &-8784465065986165668
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe3a9293e80eddc41a48c80d620d2557, type: 3}
-  m_Name: 52624168-59f6-41e5-9aac-7a36d58cde98
-  m_EditorClassIdentifier: 
-  isPlayerSpeaking: 0
-  text: "I\u2019ll have you know that I\u2019m so pleasant that I\u2019ll be allowed
-    to leave soon!"
-  children: []
-  rect:
-    serializedVersion: 2
-    x: 475
-    y: 265
-    width: 200
-    height: 100
-  onEnterActions: 
-  onExitActions: 
-  condition:
-    and: []
 --- !u!114 &-8495010046473545104
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -95,31 +13,28 @@ MonoBehaviour:
   m_Name: c75e2ef3-34ee-46e3-bd68-1e9d71596ffa
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 0
-  text: "Hello there! It\u2019s nice to finally talk to someone again, it gets\u2026
-    lonely resting in my room for so long. The doctors say I\u2019m getting better
-    though, that I\u2019ve become more agreeable and pleasant since they started
-    treatment."
+  text: 'Be careful about the wallpaper. The color stains terribly. '
   children:
-  - ddb203ee-be99-4124-a45d-e5cb2d9e42cf
-  - ffc47584-5b03-4c5b-be94-eca393986e20
-  - ccd49bc7-1c2d-429b-bcfb-99ade4234612
-  - 4231b386-0798-4c9a-aafc-4b1441412240
-  - c156e45f-12bd-490e-8a0f-2bff1762844f
-  - 7bb0f466-4b22-461e-852b-57b9d0d30679
-  - 6a0daa12-c827-4ee2-9c61-23421ca7359d
-  - a8a39e46-ddc6-4194-85b3-214b584c263d
-  - 0cd19a5c-5439-416d-a2ee-0d34bbde4ee8
+  - dcc970d1-8971-4c9c-95a7-9f1ccf783b57
+  - a8c43b5d-6730-4dd9-b920-10048e367c49
+  - c76ddb0f-a08e-4abf-a0c8-ecc03fd5f7f7
+  - e80cd068-437d-4580-8b98-ca8647b7d2b0
+  - f864e4a8-b50e-41a5-a5ce-f9cd71ba9c94
+  - 8ee56d31-1149-4d95-abeb-a90d458beb07
+  - ac9833b2-30bf-4373-8d5f-d0a587856e45
+  - 80b31a1b-ba9f-46f6-9d57-b864015c856d
+  - 58e2ca7c-67cd-4ca3-8125-dab1ea31d6aa
   rect:
     serializedVersion: 2
-    x: 7.9999924
-    y: 463
+    x: -0.0000076293945
+    y: 347
     width: 200
     height: 100
   onEnterActions: 
   onExitActions: 
   condition:
     and: []
---- !u!114 &-8416275324951005816
+--- !u!114 &-8271614967614942684
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -129,93 +44,202 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe3a9293e80eddc41a48c80d620d2557, type: 3}
-  m_Name: 988da0d9-149f-4b18-bb38-f9e150437445
-  m_EditorClassIdentifier: 
-  isPlayerSpeaking: 0
-  text: "You poor thing, do everything the doctors say and you\u2019ll be right as
-    rain in no time."
-  children: []
-  rect:
-    serializedVersion: 2
-    x: 476
-    y: 654
-    width: 200
-    height: 100
-  onEnterActions: 
-  onExitActions: 
-  condition:
-    and: []
---- !u!114 &-6852369888289440024
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe3a9293e80eddc41a48c80d620d2557, type: 3}
-  m_Name: 18512b30-dfd3-45d9-a4a8-987c588f9a31
-  m_EditorClassIdentifier: 
-  isPlayerSpeaking: 0
-  text: "I- I suppose you\u2019re right."
-  children: []
-  rect:
-    serializedVersion: 2
-    x: 476
-    y: 751
-    width: 200
-    height: 100
-  onEnterActions: 
-  onExitActions: 
-  condition:
-    and: []
---- !u!114 &-5657916765653353272
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe3a9293e80eddc41a48c80d620d2557, type: 3}
-  m_Name: 96201695-c263-472e-b6ec-aa600ad267d3
-  m_EditorClassIdentifier: 
-  isPlayerSpeaking: 0
-  text: "You poor thing! Of course, do everything the doctors say and you\u2019ll
-    be right as rain in no time."
-  children: []
-  rect:
-    serializedVersion: 2
-    x: 479
-    y: 363
-    width: 200
-    height: 100
-  onEnterActions: 
-  onExitActions: 
-  condition:
-    and: []
---- !u!114 &-5060498039322971667
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe3a9293e80eddc41a48c80d620d2557, type: 3}
-  m_Name: a8a39e46-ddc6-4194-85b3-214b584c263d
+  m_Name: f864e4a8-b50e-41a5-a5ce-f9cd71ba9c94
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 1
-  text: "Even out in the hallway it\u2019s lonely. "
+  text: Is that what caused the smooch along the wall?
   children:
-  - 18512b30-dfd3-45d9-a4a8-987c588f9a31
+  - cd18755f-b361-4323-8b7e-b1951377bb47
   rect:
     serializedVersion: 2
-    x: 276
-    y: 751
+    x: 228
+    y: 384
+    width: 200
+    height: 100
+  onEnterActions: 
+  onExitActions: 04000000
+  condition:
+    and:
+    - or:
+      - predicate: 1
+        parameters:
+        - 30
+        negate: 0
+    - or:
+      - predicate: 2
+        parameters:
+        - 59
+        negate: 0
+--- !u!114 &-8101704841220254164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe3a9293e80eddc41a48c80d620d2557, type: 3}
+  m_Name: 8ee56d31-1149-4d95-abeb-a90d458beb07
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: "I\u2019m afraid you\u2019re too late. "
+  children:
+  - c28fea7f-d225-4520-ad4a-daaa5f79f047
+  rect:
+    serializedVersion: 2
+    x: 228
+    y: 480
+    width: 200
+    height: 100
+  onEnterActions: 
+  onExitActions: 0200000005000000
+  condition:
+    and:
+    - or:
+      - predicate: 1
+        parameters:
+        - 30
+        negate: 0
+    - or:
+      - predicate: 2
+        parameters:
+        - 59
+        negate: 0
+--- !u!114 &-6207431279121671219
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe3a9293e80eddc41a48c80d620d2557, type: 3}
+  m_Name: c76ddb0f-a08e-4abf-a0c8-ecc03fd5f7f7
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: Like the splotch on my shoulder?
+  children:
+  - 48040625-690f-47a0-9318-49e46c781fb5
+  rect:
+    serializedVersion: 2
+    x: 231
+    y: 198.00002
+    width: 200
+    height: 100
+  onEnterActions: 
+  onExitActions: 0200000005000000
+  condition:
+    and:
+    - or:
+      - predicate: 1
+        parameters:
+        - 60
+        negate: 0
+--- !u!114 &-4087394418833600498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe3a9293e80eddc41a48c80d620d2557, type: 3}
+  m_Name: 59d3c032-9c0e-4c8e-8b22-a24cb8d4cfc1
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: I brushed against it by accident and the color came away on my clothes. The
+    doctors were angry.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 433
+    y: 9.000011
+    width: 200
+    height: 100
+  onEnterActions: 
+  onExitActions: 
+  condition:
+    and: []
+--- !u!114 &-2485159648269643422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe3a9293e80eddc41a48c80d620d2557, type: 3}
+  m_Name: ac9833b2-30bf-4373-8d5f-d0a587856e45
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: I bet, I can see the yellow smooches on your clothes.
+  children:
+  - 606d7cd8-e8e8-4365-80b4-459bc1a37f99
+  rect:
+    serializedVersion: 2
+    x: 233
+    y: 579
+    width: 200
+    height: 100
+  onEnterActions: 
+  onExitActions: 0100000003000000
+  condition:
+    and:
+    - or:
+      - predicate: 2
+        parameters:
+        - 29
+        negate: 0
+--- !u!114 &-2357059679001061176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe3a9293e80eddc41a48c80d620d2557, type: 3}
+  m_Name: cd18755f-b361-4323-8b7e-b1951377bb47
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: I suppose so. One of us must have leaned against the wall and smudged while
+    they walked.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 428
+    y: 384
+    width: 200
+    height: 100
+  onEnterActions: 
+  onExitActions: 
+  condition:
+    and: []
+--- !u!114 &-1873197188558038023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe3a9293e80eddc41a48c80d620d2557, type: 3}
+  m_Name: 80b31a1b-ba9f-46f6-9d57-b864015c856d
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: Did you cause the smooch along the wall?
+  children:
+  - 49440a8c-1891-4c63-80eb-6994c46ec086
+  rect:
+    serializedVersion: 2
+    x: 233
+    y: 675
     width: 200
     height: 100
   onEnterActions: 
@@ -227,7 +251,7 @@ MonoBehaviour:
         parameters:
         - 29
         negate: 0
---- !u!114 &-1806335763242257701
+--- !u!114 &-432392222062752797
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -237,27 +261,48 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe3a9293e80eddc41a48c80d620d2557, type: 3}
-  m_Name: ddb203ee-be99-4124-a45d-e5cb2d9e42cf
+  m_Name: 606d7cd8-e8e8-4365-80b4-459bc1a37f99
   m_EditorClassIdentifier: 
-  isPlayerSpeaking: 1
-  text: "That\u2019s wonderful! "
-  children:
-  - df9017f2-6ef4-4fbe-b4f7-70c58c69fcb5
+  isPlayerSpeaking: 0
+  text: I crept against it and the color came away on my clothes. The doctors were
+    angry.
+  children: []
   rect:
     serializedVersion: 2
-    x: 273
-    y: 61
+    x: 433
+    y: 579
     width: 200
     height: 100
   onEnterActions: 
-  onExitActions: 0100000003000000
+  onExitActions: 
   condition:
-    and:
-    - or:
-      - predicate: 1
-        parameters:
-        - 60
-        negate: 0
+    and: []
+--- !u!114 &-289046132191411990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe3a9293e80eddc41a48c80d620d2557, type: 3}
+  m_Name: 16184693-efd8-44c8-98be-949f764d6826
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: Yes, I crept against it and the color came away on my clothes. The doctors
+    were angry.
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 429
+    y: 291
+    width: 200
+    height: 100
+  onEnterActions: 
+  onExitActions: 
+  condition:
+    and: []
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -272,25 +317,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodes:
   - {fileID: -8495010046473545104}
-  - {fileID: -1806335763242257701}
-  - {fileID: -9047884859059399151}
-  - {fileID: 6845076143835842797}
-  - {fileID: 8814737206639813541}
-  - {fileID: 3144862311157919122}
-  - {fileID: -8784465065986165668}
-  - {fileID: 8861564625879172416}
-  - {fileID: -5657916765653353272}
-  - {fileID: 3553664029531131276}
-  - {fileID: 6993382809881160646}
-  - {fileID: 2793918263568828155}
-  - {fileID: -8884154730770396334}
-  - {fileID: 2771408989187281284}
-  - {fileID: -5060498039322971667}
-  - {fileID: 1849311782848968344}
-  - {fileID: -8416275324951005816}
-  - {fileID: -6852369888289440024}
-  - {fileID: 7851775445795845874}
---- !u!114 &1849311782848968344
+  - {fileID: 3050905702600273712}
+  - {fileID: 5333631357483321629}
+  - {fileID: -6207431279121671219}
+  - {fileID: -4087394418833600498}
+  - {fileID: 3085528705127438742}
+  - {fileID: 1123757045715716480}
+  - {fileID: 8187574320972315352}
+  - {fileID: -8271614967614942684}
+  - {fileID: -8101704841220254164}
+  - {fileID: -289046132191411990}
+  - {fileID: -2357059679001061176}
+  - {fileID: 5995469680942424949}
+  - {fileID: -2485159648269643422}
+  - {fileID: -1873197188558038023}
+  - {fileID: 4576106315127899409}
+  - {fileID: -432392222062752797}
+  - {fileID: 2147482243386089695}
+  - {fileID: 3627867706469556074}
+--- !u!114 &1123757045715716480
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -300,28 +345,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe3a9293e80eddc41a48c80d620d2557, type: 3}
-  m_Name: 0cd19a5c-5439-416d-a2ee-0d34bbde4ee8
+  m_Name: 48040625-690f-47a0-9318-49e46c781fb5
   m_EditorClassIdentifier: 
-  isPlayerSpeaking: 1
-  text: The shadows keep me company now.
-  children:
-  - 07c4db6c-c0d2-4419-a4d0-624451270bda
+  isPlayerSpeaking: 0
+  text: "It seems I\u2019m too late. Sorry I couldn\u2019t warn you sooner."
+  children: []
   rect:
     serializedVersion: 2
-    x: 278
-    y: 852
+    x: 431
+    y: 198.00002
     width: 200
     height: 100
   onEnterActions: 
-  onExitActions: 0200000005000000
+  onExitActions: 
   condition:
-    and:
-    - or:
-      - predicate: 2
-        parameters:
-        - 29
-        negate: 0
---- !u!114 &2771408989187281284
+    and: []
+--- !u!114 &2147482243386089695
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -331,16 +370,42 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe3a9293e80eddc41a48c80d620d2557, type: 3}
-  m_Name: 6a0daa12-c827-4ee2-9c61-23421ca7359d
+  m_Name: 49440a8c-1891-4c63-80eb-6994c46ec086
   m_EditorClassIdentifier: 
-  isPlayerSpeaking: 1
-  text: "I think I\u2019m getting worse."
-  children:
-  - 988da0d9-149f-4b18-bb38-f9e150437445
+  isPlayerSpeaking: 0
+  text: 'Perhaps part of it, but you also have a smooch on your shoulder. Same height
+    too. '
+  children: []
   rect:
     serializedVersion: 2
-    x: 276
-    y: 654
+    x: 433
+    y: 675
+    width: 200
+    height: 100
+  onEnterActions: 
+  onExitActions: 
+  condition:
+    and: []
+--- !u!114 &3050905702600273712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe3a9293e80eddc41a48c80d620d2557, type: 3}
+  m_Name: dcc970d1-8971-4c9c-95a7-9f1ccf783b57
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: 'How do you know? '
+  children:
+  - 59d3c032-9c0e-4c8e-8b22-a24cb8d4cfc1
+  rect:
+    serializedVersion: 2
+    x: 233
+    y: 9.000011
     width: 200
     height: 100
   onEnterActions: 
@@ -348,11 +413,11 @@ MonoBehaviour:
   condition:
     and:
     - or:
-      - predicate: 2
+      - predicate: 1
         parameters:
-        - 29
+        - 60
         negate: 0
---- !u!114 &2793918263568828155
+--- !u!114 &3085528705127438742
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -362,16 +427,68 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe3a9293e80eddc41a48c80d620d2557, type: 3}
-  m_Name: 7bb0f466-4b22-461e-852b-57b9d0d30679
+  m_Name: e41f6dae-f20c-4c54-b4fc-09ac4e554c62
   m_EditorClassIdentifier: 
-  isPlayerSpeaking: 1
-  text: Resting did get lonely, but out here the shadows keep me company.
-  children:
-  - 801cca3d-c335-4d82-af0c-b8d1b89d414f
+  isPlayerSpeaking: 0
+  text: I suppose so. Someone must have leaned against the wall and smudged while
+    they walked.
+  children: []
   rect:
     serializedVersion: 2
-    x: 274
-    y: 562
+    x: 433
+    y: 103.000015
+    width: 200
+    height: 100
+  onEnterActions: 
+  onExitActions: 
+  condition:
+    and: []
+--- !u!114 &3627867706469556074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe3a9293e80eddc41a48c80d620d2557, type: 3}
+  m_Name: fd05f490-2eac-4ff8-97b3-37bf191e6fb5
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: "Oh, I hadn\u2019t considered that. Perhaps that\u2019s what happened to
+    us."
+  children: []
+  rect:
+    serializedVersion: 2
+    x: 435
+    y: 768
+    width: 200
+    height: 100
+  onEnterActions: 
+  onExitActions: 
+  condition:
+    and: []
+--- !u!114 &4576106315127899409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe3a9293e80eddc41a48c80d620d2557, type: 3}
+  m_Name: 58e2ca7c-67cd-4ca3-8125-dab1ea31d6aa
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 1
+  text: 'I wonder if it will cling to the woman when we let her out. '
+  children:
+  - fd05f490-2eac-4ff8-97b3-37bf191e6fb5
+  rect:
+    serializedVersion: 2
+    x: 235
+    y: 768
     width: 200
     height: 100
   onEnterActions: 
@@ -379,16 +496,11 @@ MonoBehaviour:
   condition:
     and:
     - or:
-      - predicate: 1
-        parameters:
-        - 30
-        negate: 0
-    - or:
       - predicate: 2
         parameters:
-        - 59
+        - 29
         negate: 0
---- !u!114 &3144862311157919122
+--- !u!114 &5333631357483321629
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -398,42 +510,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe3a9293e80eddc41a48c80d620d2557, type: 3}
-  m_Name: 27504e40-c083-47cf-8710-1ec9f82833d6
-  m_EditorClassIdentifier: 
-  isPlayerSpeaking: 0
-  text: "Erm- thanks. I\u2019m sure that with a bit more rest you\u2019ll become
-    more agreeable too."
-  children: []
-  rect:
-    serializedVersion: 2
-    x: 474
-    y: 164
-    width: 200
-    height: 100
-  onEnterActions: 
-  onExitActions: 
-  condition:
-    and: []
---- !u!114 &3553664029531131276
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe3a9293e80eddc41a48c80d620d2557, type: 3}
-  m_Name: c156e45f-12bd-490e-8a0f-2bff1762844f
+  m_Name: a8c43b5d-6730-4dd9-b920-10048e367c49
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 1
-  text: "Even out in the hallway it\u2019s lonely."
+  text: Is that what caused the smooch along the wall?
   children:
-  - e573d940-9195-4350-ab16-fa485aea3a69
+  - e41f6dae-f20c-4c54-b4fc-09ac4e554c62
   rect:
     serializedVersion: 2
-    x: 275
-    y: 463
+    x: 233
+    y: 103.000015
     width: 200
     height: 100
   onEnterActions: 
@@ -443,45 +529,9 @@ MonoBehaviour:
     - or:
       - predicate: 1
         parameters:
-        - 30
-        negate: 0
-    - or:
-      - predicate: 2
-        parameters:
-        - 59
-        negate: 0
---- !u!114 &6845076143835842797
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe3a9293e80eddc41a48c80d620d2557, type: 3}
-  m_Name: ccd49bc7-1c2d-429b-bcfb-99ade4234612
-  m_EditorClassIdentifier: 
-  isPlayerSpeaking: 1
-  text: "Are you sure that \u2018pleasant\u2019 is the word for it?"
-  children:
-  - 52624168-59f6-41e5-9aac-7a36d58cde98
-  rect:
-    serializedVersion: 2
-    x: 275
-    y: 266
-    width: 200
-    height: 100
-  onEnterActions: 
-  onExitActions: 0200000005000000
-  condition:
-    and:
-    - or:
-      - predicate: 1
-        parameters:
         - 60
         negate: 0
---- !u!114 &6993382809881160646
+--- !u!114 &5995469680942424949
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -491,22 +541,23 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe3a9293e80eddc41a48c80d620d2557, type: 3}
-  m_Name: e573d940-9195-4350-ab16-fa485aea3a69
+  m_Name: c28fea7f-d225-4520-ad4a-daaa5f79f047
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 0
-  text: "I- I suppose you\u2019re right."
+  text: "Ah, yes that terrible splotch on your shoulder. Sorry I couldn\u2019t warn
+    you sooner."
   children: []
   rect:
     serializedVersion: 2
-    x: 475
-    y: 463
+    x: 428
+    y: 480
     width: 200
     height: 100
   onEnterActions: 
   onExitActions: 
   condition:
     and: []
---- !u!114 &7851775445795845874
+--- !u!114 &8187574320972315352
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -516,66 +567,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe3a9293e80eddc41a48c80d620d2557, type: 3}
-  m_Name: 07c4db6c-c0d2-4419-a4d0-624451270bda
-  m_EditorClassIdentifier: 
-  isPlayerSpeaking: 0
-  text: "Um, I don\u2019t think I should be talking to you."
-  children: []
-  rect:
-    serializedVersion: 2
-    x: 478
-    y: 852
-    width: 200
-    height: 100
-  onEnterActions: 
-  onExitActions: 
-  condition:
-    and: []
---- !u!114 &8814737206639813541
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe3a9293e80eddc41a48c80d620d2557, type: 3}
-  m_Name: df9017f2-6ef4-4fbe-b4f7-70c58c69fcb5
-  m_EditorClassIdentifier: 
-  isPlayerSpeaking: 0
-  text: Thank you! You must be improving too.
-  children: []
-  rect:
-    serializedVersion: 2
-    x: 473
-    y: 61
-    width: 200
-    height: 100
-  onEnterActions: 
-  onExitActions: 
-  condition:
-    and: []
---- !u!114 &8861564625879172416
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe3a9293e80eddc41a48c80d620d2557, type: 3}
-  m_Name: 4231b386-0798-4c9a-aafc-4b1441412240
+  m_Name: e80cd068-437d-4580-8b98-ca8647b7d2b0
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 1
-  text: "Could you give me some tips? I think I\u2019m getting worse."
+  text: You touched it too?
   children:
-  - 96201695-c263-472e-b6ec-aa600ad267d3
+  - 16184693-efd8-44c8-98be-949f764d6826
   rect:
     serializedVersion: 2
-    x: 279
-    y: 363
+    x: 229
+    y: 291
     width: 200
     height: 100
   onEnterActions: 
