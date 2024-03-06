@@ -6,9 +6,11 @@ using TMPro;
 
 public class EndScreenTrigger : MonoBehaviour
 {
-    [SerializeField] GameObject endScreen;
+    [SerializeField] GameObject SaneScreen;
+    [SerializeField] GameObject InsaneScreen;
     [SerializeField] GameObject dayUI;
     [SerializeField] TMP_Text dayText;
+    SanitySystem playerSanitySystem;
     Player player;
     DayTracker dayTracker;
     CursorState cursorState;
@@ -26,6 +28,7 @@ public class EndScreenTrigger : MonoBehaviour
     void Start()
     {
         cursorState = GameObject.FindObjectOfType<CursorState>();
+        playerSanitySystem = GameObject.FindObjectOfType<SanitySystem>();
     }
 
     void OnTriggerEnter(Collider other)
@@ -34,10 +37,20 @@ public class EndScreenTrigger : MonoBehaviour
         {
             if(dayMax == dayTracker.Day)
             {
-                cursorState.SetCursorLock(false);
-                endScreen.SetActive(true);
-                Cursor.lockState = CursorLockMode.None;
-                cursorState.SetCursorState(CursorType.Default);
+                if (playerSanitySystem.currentSanity >= 30)
+                {
+                    cursorState.SetCursorState(CursorType.Default);
+                    cursorState.SetCursorLock(false);
+                    SaneScreen.SetActive(true);
+                    Cursor.lockState = CursorLockMode.None;
+                }
+                else
+                {
+                    cursorState.SetCursorState(CursorType.Default);
+                    cursorState.SetCursorLock(false);
+                    InsaneScreen.SetActive(true);
+                    Cursor.lockState = CursorLockMode.None;
+                }
             }
             else
             {
