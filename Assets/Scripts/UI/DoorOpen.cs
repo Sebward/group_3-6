@@ -8,7 +8,6 @@ public class DoorOpen : MonoBehaviour
     [SerializeField] private LayerMask layerMaskInteract;
     [SerializeField] private string excludeLayerName = null;
 
-
     private MyDoorController rayCastedObj;
     private CursorState cursorState;
     GameUI gameUI;

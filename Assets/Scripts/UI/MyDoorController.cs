@@ -11,28 +11,19 @@ public class MyDoorController : MonoBehaviour
     {
         doorAnim = transform.root.gameObject.GetComponent<Animator>();
     }
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 
     public void PlayAnimation()
     {
         if (!doorOpen)
         {
             doorAnim.Play("door open", 0, 0.0f);
+            SoundManager.Instance.PlaySound(0);
             doorOpen = true;
         }
         else
         {
             doorAnim.Play("door close", 0, 0.0f);
+            SoundManager.Instance.PlaySound(1);
             doorOpen = false;
         }
     }
