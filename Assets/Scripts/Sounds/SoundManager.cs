@@ -54,10 +54,10 @@ public class SoundManager : MonoBehaviour
         PlayMusic(0);
     }
 
-    [SerializeField] AudioClip[] soundClips;
+    public AudioClip[] soundClips;
     private AudioSource soundSource;
 
-    [SerializeField] AudioClip[] musicClips;
+    public AudioClip[] musicClips;
     private AudioSource musicSource;
 
     public void PlaySound(int soundIndex)
@@ -71,6 +71,12 @@ public class SoundManager : MonoBehaviour
         {
             Debug.LogWarning("Invalid sound index: " + soundIndex);
         }
+    }
+
+    public void PlayRandomSound()
+    {
+        int randomIndex = Random.Range(0, soundClips.Length);
+        PlaySound(randomIndex);
     }
 
     public void PlayMusic(int musicIndex)
