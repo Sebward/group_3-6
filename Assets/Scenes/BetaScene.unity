@@ -2862,6 +2862,7 @@ GameObject:
   - component: {fileID: 393901161}
   - component: {fileID: 393901162}
   - component: {fileID: 393901163}
+  - component: {fileID: 393901164}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -2967,6 +2968,26 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!114 &393901164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 393901156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 893b2cb6276da8a42bce2c947af322b5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  completedGame: 0
+  culverDisCount: 0
+  jennieDisCount: 0
+  lucyDisCount: 0
+  maryDisCount: 0
+  positiveChoices: 0
+  neutralChoices: 0
+  negativeChoices: 0
 --- !u!1 &395047017
 GameObject:
   m_ObjectHideFlags: 0
@@ -4626,6 +4647,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   completedGame: 0
+  culverDisCount: 0
+  jennieDisCount: 0
+  lucyDisCount: 0
+  maryDisCount: 0
+  positiveChoices: 0
+  neutralChoices: 0
+  negativeChoices: 0
 --- !u!4 &641386283
 Transform:
   m_ObjectHideFlags: 0
@@ -6758,6 +6786,54 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+  - action: 3
+    onTrigger:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 393901164}
+          m_TargetAssemblyTypeName: FileIO, Assembly-CSharp
+          m_MethodName: ModifyPositiveChoice
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 1
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - action: 4
+    onTrigger:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 393901164}
+          m_TargetAssemblyTypeName: FileIO, Assembly-CSharp
+          m_MethodName: ModifyNeutralChoice
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 1
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - action: 5
+    onTrigger:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 393901164}
+          m_TargetAssemblyTypeName: FileIO, Assembly-CSharp
+          m_MethodName: ModifyNegativeChoice
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 1
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!65 &1003603870
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6928,7 +7004,55 @@ MonoBehaviour:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
-            m_FloatArgument: -20
+            m_FloatArgument: -30
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - action: 3
+    onTrigger:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 393901164}
+          m_TargetAssemblyTypeName: FileIO, Assembly-CSharp
+          m_MethodName: ModifyPositiveChoice
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 1
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - action: 4
+    onTrigger:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 393901164}
+          m_TargetAssemblyTypeName: FileIO, Assembly-CSharp
+          m_MethodName: ModifyNeutralChoice
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 1
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - action: 5
+    onTrigger:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 393901164}
+          m_TargetAssemblyTypeName: FileIO, Assembly-CSharp
+          m_MethodName: ModifyNegativeChoice
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 1
+            m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
@@ -7995,7 +8119,55 @@ MonoBehaviour:
             m_ObjectArgument: {fileID: 0}
             m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
             m_IntArgument: 0
-            m_FloatArgument: -20
+            m_FloatArgument: -30
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - action: 3
+    onTrigger:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 393901164}
+          m_TargetAssemblyTypeName: FileIO, Assembly-CSharp
+          m_MethodName: ModifyPositiveChoice
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 1
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - action: 4
+    onTrigger:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 393901164}
+          m_TargetAssemblyTypeName: FileIO, Assembly-CSharp
+          m_MethodName: ModifyNeutralChoice
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 1
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - action: 5
+    onTrigger:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 393901164}
+          m_TargetAssemblyTypeName: FileIO, Assembly-CSharp
+          m_MethodName: ModifyNegativeChoice
+          m_Mode: 3
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 1
+            m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2

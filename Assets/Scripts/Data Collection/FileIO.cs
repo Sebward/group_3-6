@@ -16,15 +16,31 @@ public class FileIO : MonoBehaviour
     private int finalSanity;
 
     //Total discussion count
-    public int culverDisCount { get; set; }
-    public int jennieDisCount { get; set; }
-    public int lucyDisCount { get; set; }
-    public int maryDisCount { get; set; }
+    public int culverDisCount;
+    private void ModifyCulverCount(int amount) { culverDisCount += amount; }
+
+
+    public int jennieDisCount;
+    private void ModifyJennieCount(int amount) { jennieDisCount += amount; }
+
+
+    public int lucyDisCount;
+    private void ModifyLucyCount(int amount) { lucyDisCount += amount; }
+
+
+    public int maryDisCount;
+    private void ModifyMaryCount(int amount) { maryDisCount += amount; }
+
 
     //Choice type selections
-    public int positiveChoices { get; set; }
-    public int neutralChoices { get; set; }
-    public int negativeChoices { get; set; }
+    private int positiveChoices;
+    public void ModifyPositiveChoice(int amount) { positiveChoices += amount; }
+
+    private int neutralChoices;
+    public void ModifyNeutralChoice(int amount) { neutralChoices += amount; }
+
+    private int negativeChoices; 
+    public void ModifyNegativeChoice(int amount) { negativeChoices += amount; Debug.Log("Negative choices Test: " + negativeChoices); }
 
 
     public void Start()
@@ -32,11 +48,14 @@ public class FileIO : MonoBehaviour
         startTime = System.DateTime.Now;
 
         sanitySystem = gameObject.GetComponent<SanitySystem>();
+        completedGame = false;
     }
 
     public void CreateText()
     {
-        string path = Application.dataPath + "/Data/Playtest" + System.DateTime.Now +".txt";
+        Debug.Log("Negative choices: " + negativeChoices);
+
+        string path = Application.dataPath + "/Data/Playtest" + 2 +".txt";
 
         if (!File.Exists(path))
         {
@@ -54,8 +73,7 @@ public class FileIO : MonoBehaviour
             string choiceCount = "Conversation Type Selection Totals:\n" +
                 "Positive Choices: " + positiveChoices + "\n" +
                 "Neutral Choices: " + neutralChoices + "\n" +
-                "Negative Choices: " + negativeChoices + "\n";
-
+                "Negative Choices: " + negativeChoices + "\n";    
 
             string endTime = "End Time: " + System.DateTime.Now;
 
