@@ -32,17 +32,14 @@ public class SanitySystem : MonoBehaviour, IPredicateEvaluator
         return this.currentSanity;
     }
 
+    // Trigger events based on sanity
     private void CheckSanityLevelEvents()
     {
-        // Trigger events based on sanity level.
-        // These are just an example
-        if (currentSanity < 20)
+        if (currentSanity < 50)
         {
             // Trigger low sanity event.
-        }
-        else if (currentSanity > 80)
-        {
-            // Trigger high sanity event.
+            SoundManager.Instance.PlayMusic(1);
+            SoundManager.Instance.SetMusicVolume(0.8f);
         }
     }
 
