@@ -14,6 +14,7 @@ public class EndScreenTrigger : MonoBehaviour
     Player player;
     DayTracker dayTracker;
     CursorState cursorState;
+    FileIO fileIO;
     public int dayMax = 5;
 
     private FadeInOut fadeInOut;
@@ -23,6 +24,7 @@ public class EndScreenTrigger : MonoBehaviour
         player = GameObject.Find("Player").GetComponent<Player>() as Player;
         dayTracker = GameObject.Find("DayTracker").GetComponent<DayTracker>() as DayTracker;
         fadeInOut = FindObjectOfType<FadeInOut>();
+        fileIO = gameObject.GetComponent<FileIO>();
     }
 
     void Start()
@@ -37,6 +39,7 @@ public class EndScreenTrigger : MonoBehaviour
         {
             if(dayMax == dayTracker.Day)
             {
+                fileIO.completedGame = true;
                 if (playerSanitySystem.currentSanity >= 30)
                 {
                     cursorState.SetCursorState(CursorType.Default);
