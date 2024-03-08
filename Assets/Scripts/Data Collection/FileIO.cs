@@ -89,18 +89,18 @@ public class FileIO : MonoBehaviour
         }     
     }
 
-    public void SaveAndQuit()
+    /*public void SaveAndQuit()
     {
         StartCoroutine(SaveAndQuitTimed());
-    }
+    }*/
 
-    private IEnumerator SaveAndQuitTimed()
+    /*private IEnumerator SaveAndQuitTimed()
     {
         Save();
         yield return new WaitForSeconds(5f);
         Application.Quit();
         UnityEditor.EditorApplication.isPlaying = false;
-    }
+    }*/
 
     public void SetStartTime()
     {
