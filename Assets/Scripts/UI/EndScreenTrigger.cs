@@ -24,7 +24,7 @@ public class EndScreenTrigger : MonoBehaviour
         player = GameObject.Find("Player").GetComponent<Player>() as Player;
         dayTracker = GameObject.Find("DayTracker").GetComponent<DayTracker>() as DayTracker;
         fadeInOut = FindObjectOfType<FadeInOut>();
-        fileIO = gameObject.GetComponent<FileIO>();
+        fileIO = FindObjectOfType<FileIO>();
     }
 
     void Start()

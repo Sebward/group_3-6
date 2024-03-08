@@ -17,19 +17,19 @@ public class FileIO : MonoBehaviour
 
     //Total discussion count
     public int culverDisCount;
-    private void ModifyCulverCount(int amount) { culverDisCount += amount; }
+    public void ModifyCulverCount(int amount) { culverDisCount += amount; }
 
 
     public int jennieDisCount;
-    private void ModifyJennieCount(int amount) { jennieDisCount += amount; }
+    public void ModifyJennieCount(int amount) { jennieDisCount += amount; }
 
 
     public int lucyDisCount;
-    private void ModifyLucyCount(int amount) { lucyDisCount += amount; }
+    public void ModifyLucyCount(int amount) { lucyDisCount += amount; }
 
 
     public int maryDisCount;
-    private void ModifyMaryCount(int amount) { maryDisCount += amount; }
+    public void ModifyMaryCount(int amount) { maryDisCount += amount; }
 
 
     //Choice type selections
