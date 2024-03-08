@@ -56,7 +56,7 @@ public class FileIO : MonoBehaviour
     {
         //Debug.Log("Negative choices: " + negativeChoices);
 
-        string path = Application.dataPath + "/Data/Playtest_" + System.DateTime.Now.Month + "_" + System.DateTime.Now.Day + "_" + System.DateTime.Now.Hour + "_" + System.DateTime.Now.Minute + ".txt";
+        string path = Directory.GetCurrentDirectory() + "/Data/Playtest_" + System.DateTime.Now.Month + "_" + System.DateTime.Now.Day + "_" + System.DateTime.Now.Hour + "_" + System.DateTime.Now.Minute + ".txt";
 
         finalSanity = sanitySystem.getCurrentSanity();
 
