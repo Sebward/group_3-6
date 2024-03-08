@@ -116,7 +116,7 @@ MonoBehaviour:
     y: 463
     width: 200
     height: 100
-  onEnterActions: 
+  onEnterActions: 06000000
   onExitActions: 
   condition:
     and: []
@@ -313,7 +313,7 @@ MonoBehaviour:
     y: 852
     width: 200
     height: 100
-  onEnterActions: 
+  onEnterActions: 00000000
   onExitActions: 0200000005000000
   condition:
     and:

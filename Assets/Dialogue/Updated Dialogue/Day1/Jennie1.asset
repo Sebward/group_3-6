@@ -113,7 +113,7 @@ MonoBehaviour:
     y: 463
     width: 200
     height: 100
-  onEnterActions: 
+  onEnterActions: 07000000
   onExitActions: 
   condition:
     and: []

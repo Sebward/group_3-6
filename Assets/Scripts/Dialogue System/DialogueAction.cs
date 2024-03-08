@@ -12,6 +12,10 @@ namespace Game.Dialogue
         DecreaseSanity,
         IncreaseGoodChoiceCount,
         IncreaseNeutralChoiceCount,
-        IncreaseBadChoiceCount
+        IncreaseBadChoiceCount,
+        CulverIncreaseCount,
+        JennieIncreaseCount,
+        LucyIncreaseCount,
+        MaryIncreaseCount
     }
 }

@@ -13,7 +13,7 @@ public class FileIO : MonoBehaviour
     public bool completedGame;
 
     //Sanity Tracker
-    private int finalSanity;
+    public float finalSanity { get; set; }
 
     //Total discussion count
     public int culverDisCount;
@@ -39,23 +39,26 @@ public class FileIO : MonoBehaviour
     private int neutralChoices;
     public void ModifyNeutralChoice(int amount) { neutralChoices += amount; }
 
-    private int negativeChoices; 
-    public void ModifyNegativeChoice(int amount) { negativeChoices += amount; Debug.Log("Negative choices Test: " + negativeChoices); }
+    private int negativeChoices;
+
+    public void ModifyNegativeChoice(int amount) { negativeChoices += amount; }
 
 
     public void Start()
     {
-        startTime = System.DateTime.Now;
+        //startTime = System.DateTime.Now;
 
         sanitySystem = gameObject.GetComponent<SanitySystem>();
         completedGame = false;
     }
 
-    public void CreateText()
+    public void Save()
     {
-        Debug.Log("Negative choices: " + negativeChoices);
+        //Debug.Log("Negative choices: " + negativeChoices);
 
-        string path = Application.dataPath + "/Data/Playtest" + 2 +".txt";
+        string path = Application.dataPath + "/Data/Playtest_" + System.DateTime.Now.Month + "_" + System.DateTime.Now.Day + "_" + System.DateTime.Now.Hour + "_" + System.DateTime.Now.Minute + ".txt";
+
+        finalSanity = sanitySystem.getCurrentSanity();
 
         if (!File.Exists(path))
         {
@@ -83,16 +86,24 @@ public class FileIO : MonoBehaviour
             File.AppendAllText(path, conversationCount);
             File.AppendAllText(path, choiceCount);
             File.AppendAllText(path, endTime);
-        } 
-        //Debug.Log("FileIO is running");
+        }     
     }
 
-    public System.DateTime StartTime
+    public void SaveAndQuit()
     {
-        set
-        {
-            startTime = System.DateTime.Now;
-        }
+        StartCoroutine(SaveAndQuitTimed());
     }
 
+    private IEnumerator SaveAndQuitTimed()
+    {
+        Save();
+        yield return new WaitForSeconds(5f);
+        Application.Quit();
+        UnityEditor.EditorApplication.isPlaying = false;
+    }
+
+    public void SetStartTime()
+    {
+        startTime = System.DateTime.Now;      
+    }
 }

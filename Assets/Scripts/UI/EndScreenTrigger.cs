@@ -39,7 +39,8 @@ public class EndScreenTrigger : MonoBehaviour
         {
             if(dayMax == dayTracker.Day)
             {
-                fileIO.completedGame = true;
+                fileIO.completedGame = true;               
+                fileIO.Save();
                 if (playerSanitySystem.currentSanity >= 30)
                 {
                     cursorState.SetCursorState(CursorType.Default);
