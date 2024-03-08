@@ -13,35 +13,35 @@ public class FileIO : MonoBehaviour
     public bool completedGame;
 
     //Sanity Tracker
-    public float finalSanity { get; set; }
+    [SerializeField] private float finalSanity { get; set; }
 
     //Total discussion count
-    public int culverDisCount;
-    public void ModifyCulverCount(int amount) { culverDisCount += amount; }
+    [SerializeField] private int culverDisCount;
+    public void ModifyCulverCount(int amount) { culverDisCount++; }
 
 
-    public int jennieDisCount;
-    public void ModifyJennieCount(int amount) { jennieDisCount += amount; }
+    [SerializeField] private int jennieDisCount;
+    public void ModifyJennieCount(int amount) { jennieDisCount++; }
 
 
-    public int lucyDisCount;
-    public void ModifyLucyCount(int amount) { lucyDisCount += amount; }
+    [SerializeField] private int lucyDisCount;
+    public void ModifyLucyCount(int amount) { lucyDisCount++; }
 
 
-    public int maryDisCount;
-    public void ModifyMaryCount(int amount) { maryDisCount += amount; }
+    [SerializeField] private int maryDisCount;
+    public void ModifyMaryCount(int amount) { maryDisCount++; }
 
 
     //Choice type selections
-    private int positiveChoices;
-    public void ModifyPositiveChoice(int amount) { positiveChoices += amount; }
+    [SerializeField] private int positiveChoices;
+    public void ModifyPositiveChoice(int amount) { positiveChoices++; }
 
-    private int neutralChoices;
-    public void ModifyNeutralChoice(int amount) { neutralChoices += amount; }
+    [SerializeField] private int neutralChoices;
+    public void ModifyNeutralChoice(int amount) { neutralChoices++; }
 
-    private int negativeChoices;
+    [SerializeField] private int negativeChoices;
 
-    public void ModifyNegativeChoice(int amount) { negativeChoices += amount; }
+    public void ModifyNegativeChoice(int amount) { negativeChoices++; }
 
 
     public void Start()
