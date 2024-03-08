@@ -6485,10 +6485,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 119826661852746588, guid: 4f106a3f2af5c4f4982ee2fa3432b577, type: 3}
-      propertyPath: m_TagString
-      value: Untagged
-      objectReference: {fileID: 0}
     - target: {fileID: 1808306511631906187, guid: 4f106a3f2af5c4f4982ee2fa3432b577, type: 3}
       propertyPath: m_Name
       value: Door (9)

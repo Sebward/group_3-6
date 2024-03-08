@@ -1,0 +1,13 @@
+Start Time: 3/8/2024 12:08:00 AM
+Completed Game?: True
+Final Sanity: 55
+Conversation Count Totals:
+Dr. Culver: 2
+Jennie: 4
+Lucy: 2
+Mary: 1
+Conversation Type Selection Totals:
+Positive Choices: 4
+Neutral Choices: 1
+Negative Choices: 4
+End Time: 3/8/2024 12:09:42 AM
