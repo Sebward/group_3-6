@@ -24,6 +24,8 @@ public class SanitySystem : MonoBehaviour, IPredicateEvaluator
         // Trigger the sanity changed event.
         OnSanityChanged?.Invoke(currentSanity);
         CheckSanityLevelEvents();
+
+        //Set FileIO
     }
 
     // return current sanity level || might be redundant

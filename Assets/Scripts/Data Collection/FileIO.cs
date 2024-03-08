@@ -13,30 +13,52 @@ public class FileIO : MonoBehaviour
     public bool completedGame;
 
     //Sanity Tracker
-    private int finalSanity;
+    public float finalSanity { get; set; }
 
     //Total discussion count
-    public int culverDisCount { get; set; }
-    public int jennieDisCount { get; set; }
-    public int lucyDisCount { get; set; }
-    public int maryDisCount { get; set; }
+    public int culverDisCount;
+    public void ModifyCulverCount(int amount) { culverDisCount += amount; }
+
+
+    public int jennieDisCount;
+    public void ModifyJennieCount(int amount) { jennieDisCount += amount; }
+
+
+    public int lucyDisCount;
+    public void ModifyLucyCount(int amount) { lucyDisCount += amount; }
+
+
+    public int maryDisCount;
+    public void ModifyMaryCount(int amount) { maryDisCount += amount; }
+
 
     //Choice type selections
-    public int positiveChoices { get; set; }
-    public int neutralChoices { get; set; }
-    public int negativeChoices { get; set; }
+    private int positiveChoices;
+    public void ModifyPositiveChoice(int amount) { positiveChoices += amount; }
+
+    private int neutralChoices;
+    public void ModifyNeutralChoice(int amount) { neutralChoices += amount; }
+
+    private int negativeChoices;
+
+    public void ModifyNegativeChoice(int amount) { negativeChoices += amount; }
 
 
     public void Start()
     {
-        startTime = System.DateTime.Now;
+        //startTime = System.DateTime.Now;
 
         sanitySystem = gameObject.GetComponent<SanitySystem>();
+        completedGame = false;
     }
 
-    public void CreateText()
+    public void Save()
     {
-        string path = Application.dataPath + "/Data/Playtest" + System.DateTime.Now +".txt";
+        //Debug.Log("Negative choices: " + negativeChoices);
+
+        string path = Application.dataPath + "/Data/Playtest_" + System.DateTime.Now.Month + "_" + System.DateTime.Now.Day + "_" + System.DateTime.Now.Hour + "_" + System.DateTime.Now.Minute + ".txt";
+
+        finalSanity = sanitySystem.getCurrentSanity();
 
         if (!File.Exists(path))
         {
@@ -54,8 +76,7 @@ public class FileIO : MonoBehaviour
             string choiceCount = "Conversation Type Selection Totals:\n" +
                 "Positive Choices: " + positiveChoices + "\n" +
                 "Neutral Choices: " + neutralChoices + "\n" +
-                "Negative Choices: " + negativeChoices + "\n";
-
+                "Negative Choices: " + negativeChoices + "\n";    
 
             string endTime = "End Time: " + System.DateTime.Now;
 
@@ -65,16 +86,24 @@ public class FileIO : MonoBehaviour
             File.AppendAllText(path, conversationCount);
             File.AppendAllText(path, choiceCount);
             File.AppendAllText(path, endTime);
-        } 
-        //Debug.Log("FileIO is running");
+        }     
     }
 
-    public System.DateTime StartTime
+    public void SaveAndQuit()
     {
-        set
-        {
-            startTime = System.DateTime.Now;
-        }
+        StartCoroutine(SaveAndQuitTimed());
     }
 
+    private IEnumerator SaveAndQuitTimed()
+    {
+        Save();
+        yield return new WaitForSeconds(5f);
+        Application.Quit();
+        UnityEditor.EditorApplication.isPlaying = false;
+    }
+
+    public void SetStartTime()
+    {
+        startTime = System.DateTime.Now;      
+    }
 }
