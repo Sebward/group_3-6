@@ -13,15 +13,43 @@ MonoBehaviour:
   m_Name: c75e2ef3-34ee-46e3-bd68-1e9d71596ffa
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 0
-  text: " Oh, good you\u2019re awake. That in itself is a most promising sign, you
+  text: "Oh, good you\u2019re awake. That in itself is a most promising sign, you
     poor nervous dears do so like to wallow in self pity. But seeing as you\u2019re
     already awake, you must finally have the energy for some light exercise and fresh
     air!"
   children:
-  - d22f8ebf-d608-47e0-bd98-036c27b0eed6
+  - 1b711d6d-df57-4218-a1d7-8be3b7735ec9
   rect:
     serializedVersion: 2
     x: -2.0000076
+    y: 70.00001
+    width: 200
+    height: 100
+  onEnterActions: 
+  onExitActions: 
+  condition:
+    and: []
+--- !u!114 &-759914976958809300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe3a9293e80eddc41a48c80d620d2557, type: 3}
+  m_Name: 1b711d6d-df57-4218-a1d7-8be3b7735ec9
+  m_EditorClassIdentifier: 
+  isPlayerSpeaking: 0
+  text: 'Please step into the hallway with me, dear girl, your new treatment starts
+    now. You see, we here at Saint Charlotte''s have devised a revolutionary new
+    cure for nervous depressions and hysterical tendencies. '
+  children:
+  - 01212ad5-4977-4af4-a4f4-1d494e72ca2c
+  rect:
+    serializedVersion: 2
+    x: 199
     y: 70.00001
     width: 200
     height: 100
@@ -43,9 +71,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodes:
   - {fileID: -8495010046473545104}
-  - {fileID: 2045034011694559545}
-  - {fileID: 8608412272349687136}
---- !u!114 &2045034011694559545
+  - {fileID: -759914976958809300}
+  - {fileID: 6478285608708225708}
+  - {fileID: 7879394458853421497}
+--- !u!114 &6478285608708225708
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -55,22 +84,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe3a9293e80eddc41a48c80d620d2557, type: 3}
-  m_Name: d22f8ebf-d608-47e0-bd98-036c27b0eed6
+  m_Name: 01212ad5-4977-4af4-a4f4-1d494e72ca2c
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 0
-  text: "Please step into the hallway with me, dear girl, your new treatment starts
-    now. You see, we here at Saint Charlotte's have devised a revolutionary new cure
-    for nervous depressions and hysterical tendencies. I won\u2019t overwhelm your
-    fragile little head with the details, but know that the wallpaper\u2019s bright
-    sunny hue will balance the humors and the floral pattern will stimulate the mind
-    and the dim light will prevent irritation to your delicate eyes. A short stroll
-    down the hallway with some brief polite conversation will prepare you to return
-    to your household in, hmm, five days' time. "
+  text: "I won\u2019t overwhelm your fragile little head with the details, but know
+    that the wallpaper\u2019s bright sunny hue will balance the humors and the floral
+    pattern will stimulate the mind and the dim light will prevent irritation to
+    your delicate eyes. A short stroll down the hallway with some brief polite conversation
+    will prepare you to return to your household in, hmm, five days' time. "
   children:
-  - a8f3e292-a4df-4201-b953-2f5948534494
+  - 2d508b59-3432-4595-b277-bdceff747019
   rect:
     serializedVersion: 2
-    x: 198
+    x: 399
     y: 70.00001
     width: 200
     height: 100
@@ -78,7 +104,7 @@ MonoBehaviour:
   onExitActions: 
   condition:
     and: []
---- !u!114 &8608412272349687136
+--- !u!114 &7879394458853421497
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -88,14 +114,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe3a9293e80eddc41a48c80d620d2557, type: 3}
-  m_Name: a8f3e292-a4df-4201-b953-2f5948534494
+  m_Name: 2d508b59-3432-4595-b277-bdceff747019
   m_EditorClassIdentifier: 
   isPlayerSpeaking: 0
   text: "Come now, you want to get better don\u2019t you?"
   children: []
   rect:
     serializedVersion: 2
-    x: 398
+    x: 599
     y: 70.00001
     width: 200
     height: 100
